@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koteuu - Strona Główna</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="assets/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload image
+  -->
+  <link rel="preconnect" as="image" href="assets/images/koteuu-banner.png">
+
+ 
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+<header class="header" data-header>
+  <div class="container">
+    <h1>
+      <a href="#" class="logo">Koteuu</a>
+    </h1>
+
+    <nav class="navbar container" data-navbar>
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a href="#home" class="navbar-link" data-nav-link>Strona Główna</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#info" class="navbar-link" data-nav-link>Informacje</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#features" class="navbar-link" data-nav-link>Funkcje</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#about" class="navbar-link" data-nav-link>Korzyści</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#stats" class="navbar-link" data-nav-link>Statystyki</a>
+        </li>
+        <li class="navbar-item">
+          <a href="/discord" class="navbar-link" data-nav-link>Kontakt</a>
+        </li>
+      </ul>
+    </nav>
+
+    <form action="/invite">
+      <button class="btn btn-secondary">
+        <i class="fa-brands fa-discord"></i> Dodaj na Serwer
+      </button>
+    </form>
+
+    <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggle-btn>
+      <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
+      <ion-icon name="close-outline" class="close-icon"></ion-icon>
+    </button>
+
+    <button class="theme-toggle-btn" aria-label="Toggle theme" data-theme-toggle-btn>
+      <ion-icon name="moon-outline"></ion-icon>
+      <ion-icon name="sunny-outline"></ion-icon>
+    </button>
+  </div>
+</header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #koteuu
+      -->
+
+      <section class="section koteuu" id="home">
+        <div class="container">
+
+          <figure class="koteuu-banner">
+            <img src="assets/images/koteuu-banner.png"  loading="lazy" alt="koteuu banner"
+              class="w-100">
+          </figure>
+
+          <div class="koteuu-content">
+
+            <h2 class="h1 koteuu-title">Koteuu 😹</h2>
+
+            <p class="section-text">
+              Nasz bot ułatwia zarządzanie serwerem oraz dostarcza dodatkowe funkcje, które pomogą jeszcze bardziej efektywniej korzystać z Discord'a!
+            </p>
+<br>
+<!--             <form action="/discord" class="koteuu-form">
+          
+              <button type="submit" class="btn btn-primary">Join Now</button>
+            </form> -->
+
+            <ul class="koteuu-list">
+
+              <li class="koteuu-item">
+                <img src="assets/images/check-circle.svg" width="16" height="16" loading="lazy" alt="Checkmark icon">
+
+                <span class="span">Ekonomia</span>
+              </li>
+
+              <li class="koteuu-item">
+                <img src="assets/images/check-circle.svg" width="16" height="16" loading="lazy" alt="Checkmark icon">
+
+                <span class="span">Tickety</span>
+              </li>
+
+              <li class="koteuu-item">
+                <img src="assets/images/check-circle.svg" width="16" height="16" loading="lazy" alt="Checkmark icon">
+
+                <span class="span">Moderacja</span>
+              </li>
+
+              <li class="koteuu-item">
+                <img src="assets/images/check-circle.svg" width="16" height="16" loading="lazy" alt="Checkmark icon">
+
+                <span class="span">Muzyka</span>
+              </li>
+
+              <li class="koteuu-item">
+                <img src="assets/images/check-circle.svg" width="16" height="16" loading="lazy" alt="Checkmark icon">
+
+                <span class="span">... i wiele więcej!</span>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="section service" id="info">
+        <div class="container">
+
+          <h2 class="h2 section-title">Dlaczego warto go dodać?</h2>
+
+          <p class="section-text">
+           Zalety, które może nie czynią go wyjątkowym, ale warto je podkreślić.
+          </p>
+
+          <ul class="service-list">
+
+            <li>
+              <div class="service-card">
+
+                <figure class="card-banner">
+                  <img src="assets/images/service-1.gif" width="728" height="344" loading="lazy" alt="support"
+                    class="w-100">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Dostępność</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Nasz bot pracuje 24/7 oferując przy tym niskie opóźnienie. Dodatkowo wszystkie przerwy technicznne są ogłaszane wcześniej. 
+                  </p>
+
+<!--                   <a href="#" class="btn-link">
+                    <span class="span">Learn More</span>
+
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                  </a> -->
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <figure class="card-banner">
+                  <img src="assets/images/service-2.gif" width="728" height="344" loading="lazy" alt="Engagement"
+                    class="w-100">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Funkcjonalność</a>
+                  </h3>
+
+                  <p class="card-text">
+                   Oferujemy wiele przydatnych funkcji, które pomogą Ci w zarządzaniu twoim serwerem. Więcej informacji znajdziesz poniżej.
+                  </p>
+
+<!--                   <a href="#" class="btn-link">
+                    <span class="span">Learn More</span>
+
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                  </a> -->
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <figure class="card-banner">
+                  <img src="assets/images/service-3.gif" width="728" height="344" loading="lazy" alt="Marketing"
+                    class="w-100">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Aktualność</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Projekt jest ciągle aktualizowany i z czasem wprowadzane są nowe funkcje, które są wyczekiwane przez użytkowników. Obsługuje komendy z ukośnikiem i prefix'em.
+                  </p>
+
+<!--                   <a href="#" class="btn-link">
+                    <span class="span">Learn More</span>
+
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                  </a> -->
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #FEATURES
+      -->
+
+      <section class="section features" id="features">
+        <div class="container">
+
+          <div class="features-content">
+
+            <h2 class="h2 section-title">Wszystkie Dostępne Funkcje</h2>
+
+            <p class="section-text">
+              Oto lista funkcji, z których możesz korzystać bez żadnych ograniczeń na swoim serwerze.
+            </p>
+
+            <ul class="features-list">
+
+              <li class="features-item">
+                <img src="assets/images/features-icon-economy.png" width="26" height="26" loading="lazy" aria-hidden="true"
+                  class="item-icon">
+
+                <h3 class="item-title">Ekonomia</h3>
+              </li>
+
+              <li class="features-item">
+                <img src="assets/images/features-icon-games.png" width="26" height="26" loading="lazy" aria-hidden="true"
+                  class="item-icon">
+                <h3 class="item-title">Gry</h3>
+              </li>
+
+              <li class="features-item">
+                <img src="assets/images/features-icon-information.png" width="26" height="26" loading="lazy" aria-hidden="true"
+                  class="item-icon">
+
+                <h3 class="item-title">Informacje</h3>
+              </li>
+
+              <li class="features-item">
+                <img src="assets/images/features-icon-moderation.png" width="26" height="26" loading="lazy" aria-hidden="true"
+                  class="item-icon">
+
+                <h3 class="item-title">Moderacja</h3>
+              </li>
+              <li class="features-item">
+                <img src="assets/images/features-icon-music.png" width="26" height="26" loading="lazy" aria-hidden="true"
+                  class="item-icon">
+
+                <h3 class="item-title">Muzyka</h3>
+              </li>
+              <li class="features-item">
+                <img src="assets/images/features-icon-tickets.png" width="26" height="26" loading="lazy" aria-hidden="true"
+                  class="item-icon">
+
+                <h3 class="item-title">Tickety</h3>
+              </li>
+              <li class="features-item">
+                <img src="assets/images/features-icon-tools.png" width="26" height="26" loading="lazy" aria-hidden="true"
+                  class="item-icon">
+
+                <h3 class="item-title">Narzędzia</h3>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="banner-wrapper">
+
+            <figure class="features-banner one">
+              <img src="assets/images/dc.svg" width="600" height="500" loading="lazy"
+                alt="features image" class="w-100">
+            </figure>
+
+            <figure class="features-banner two">
+              <img src="assets/images/dc-2.svg" width="436" height="311" loading="lazy"
+                alt="features image" class="w-100">
+            </figure>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" id="about">
+        <div class="container">
+
+          <h2 class="h2 section-title">Ulepsz Swoje Doświadczenie!</h2>
+
+          <p class="section-text">
+           Najciekawsze korzyści, z których będzie mógł korzystać Twój serwer, kiedy dodasz naszego bota. 
+          </p>
+
+          <ul class="about-list">
+
+            <li>
+              <div class="about-card about-card-1">
+
+                <figure class="card-banner">
+                  <img src="assets/images/about-img-1.svg" width="94" height="94" loading="lazy"
+                    alt="Automated Ticket Routing">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Menu Pomocy</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Nie wiesz jak skorzystać z jakiejś komendy? Oznacz bota, a on wyśle Ci wszystkie potrzebne informacje.
+                  </p>
+
+<!--                   <a href="#" class="btn-link">
+                    <span class="span">Learn More</span>
+
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                  </a> -->
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="about-card about-card-2">
+
+                <figure class="card-banner">
+                  <img src="assets/images/about-img-2.svg" width="94" height="94" loading="lazy"
+                    alt="Workflow Automation">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Logi Wiadomości</a>
+                  </h3>
+
+                  <p class="card-text">
+                  Od teraz będziesz mógł widzieć wszystkie usunięte, bądź zedytowane wiadomości użytkowników Twojego serwera.
+                  </p>
+
+<!--                   <a href="#" class="btn-link">
+                    <span class="span">Learn More</span>
+
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                  </a> -->
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="about-card about-card-3">
+
+                <figure class="card-banner">
+                  <img src="assets/images/about-img-3.svg" width="94" height="94" loading="lazy"
+                    alt="Automated Callback">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Odtwarzanie Muzyki</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Możesz odtwarzać muzykę, na dowolnym kanale głosowym korzystając z interaktywnego odtwarzacza. 
+                  </p>
+
+<!--                   <a href="#" class="btn-link">
+                    <span class="span">Learn More</span>
+
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                  </a> -->
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="about-card about-card-4">
+
+                <figure class="card-banner">
+                  <img src="assets/images/about-img-4.svg" width="94" height="94" loading="lazy"
+                    alt="Customer Feedback Surveys">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">System Ticketów</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Pozwól użytkownikom Twojego serwera korzystać z Ticketów, abyś mógł im szybko i wygodnie pomagać.
+                  </p>
+
+<!--                   <a href="#" class="btn-link">
+                    <span class="span">Learn More</span>
+
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                  </a> -->
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+		<p class="section-text">Jeszcze się zastanawiasz? <a href="/invite" class="btn-link">
+			<span class="span">Dodaj Koteuu na swój serwer, i sprawdź sam! </span>
+			<ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+		</a></p>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #STATS
+      -->
+
+      <section class="section stats" id="stats">
+        <div class="container">
+
+          <figure class="stats-banner">
+            <img src="assets/images/stats-banner.png" width="619" height="482" loading="lazy" alt="stats"
+              class="w-100">
+          </figure>
+
+          <ul class="stats-list">
+
+            <li class="stats-item purple">
+              <h3 class="item-title">
+                100+
+                <span class="span">użytkowników</span>
+              </h3>
+
+              <p class="stats-text">Aktywni Użytkownicy</p>
+            </li>
+
+            <li class="stats-item red">
+              <h3 class="item-title">
+                800+
+                <span class="span">użytkowników</span>
+              </h3>
+
+              <p class="stats-text">Zarejestrowani Użytkownicy</p>
+            </li>
+
+            <li class="stats-item green">
+              <h3 class="item-title">
+                335+
+                <span class="span">kanałów</span>
+              </h3>
+
+              <p class="stats-text">Zarejestrowane Kanały</p>
+            </li>
+
+            <li class="stats-item yellow">
+              <h3 class="item-title">
+                20+
+                <span class="span">serwerów</span>
+              </h3>
+
+              <p class="stats-text">Serwery z Koteuu</p>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+      <!-- 
+        - #SUPPORT
+
+      <section class="section support" id="contact">
+        <div class="container">
+
+          <div class="support-content">
+            <h2 class="h2 section-title">24/7 Customer Support</h2>
+
+            <p class="section-text">
+              Our team is here to provide you with personalized and outstanding service. We also offer a range of
+              self-learning tools
+              in our support center:
+            </p>
+          </div>
+
+          <a href="/discord" class="btn btn-primary">Join Us</a>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+      -->
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2024 <span class="span">Koteuu Core</span>. Strona stworzona przez <a href="MrShadow_(edit,_website_format)_+_diwasatreya_(creator)"
+            class="copyright-link">MrShadow_</a>.
+        </p>
+<!--
+        <ul class="footer-bottom-list">
+         <li>
+           <a href="#" class="footer-bottom-link">Privacy Policy</a>
+         </li>
+
+          <li>
+            <a href="#" class="footer-bottom-link">Security</a>
+          </li>
+
+          <li>
+           <a href="#" class="footer-bottom-link">Terms & Conditions</a>
+         </li>
+        </ul>
+
+      </div>
+    </div>
+-->
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="assets/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy-bundle.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+</body>
+
+</html>
