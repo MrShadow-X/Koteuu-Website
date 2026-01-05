@@ -19,6 +19,8 @@ for (let i = 0; i < navbarLinks.length; i++) {
   });
 }
 
+
+
 // STICKY HEADER - Pojawia się przy scrollu
 const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
@@ -47,4 +49,15 @@ themeToggleBtn.addEventListener('click', () => {
   const newTheme = currentTheme === 'light' ? 'dark' : 'light';
   html.setAttribute('data-theme', newTheme);
   localStorage.setItem('theme', newTheme);
+
+// ZAMYKANIE MENU po kliknięciu poza nim
+document.addEventListener('click', function(event) {
+  const isClickInsideNavbar = navbar.contains(event.target);
+  const isClickOnToggleBtn = navToggleBtn.contains(event.target);
+  
+  // Jeśli kliknięto poza menu i poza przyciskiem toggle, zamknij menu
+  if (!isClickInsideNavbar && !isClickOnToggleBtn && navbar.classList.contains('active')) {
+    navbar.classList.remove('active');
+    navToggleBtn.classList.remove('active');
+  }
 });
