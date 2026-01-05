@@ -35,13 +35,26 @@ window.addEventListener("scroll", function () {
   }
 });
 
+
+
 // ZMIANA MOTYWU - Dark/Light mode
 const themeToggleBtn = document.querySelector('[data-theme-toggle-btn]');
 const html = document.documentElement;
+const themeColorMeta = document.getElementById('theme-color-meta');
+
+// Funkcja do aktualizacji koloru paska przeglądarki
+function updateThemeColor(theme) {
+  if (theme === 'dark') {
+    themeColorMeta.setAttribute('content', '#262626'); // Ciemny kolor
+  } else {
+    themeColorMeta.setAttribute('content', '#ffffff'); // Jasny kolor
+  }
+}
 
 // Załaduj zapisany motyw lub ustaw domyślnie ciemny
 const savedTheme = localStorage.getItem('theme') || 'dark';
 html.setAttribute('data-theme', savedTheme);
+updateThemeColor(savedTheme);
 
 // Przełącz motyw po kliknięciu
 themeToggleBtn.addEventListener('click', () => {
@@ -49,6 +62,10 @@ themeToggleBtn.addEventListener('click', () => {
   const newTheme = currentTheme === 'light' ? 'dark' : 'light';
   html.setAttribute('data-theme', newTheme);
   localStorage.setItem('theme', newTheme);
+  updateThemeColor(newTheme);
+});
+
+
 
 // ZAMYKANIE MENU po kliknięciu poza nim
 document.addEventListener('click', function(event) {
