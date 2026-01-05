@@ -44,11 +44,17 @@ const themeColorMeta = document.getElementById('theme-color-meta');
 
 // Funkcja do aktualizacji koloru paska przeglądarki
 function updateThemeColor(theme) {
-  if (theme === 'dark') {
-    themeColorMeta.setAttribute('content', '#262626'); // Ciemny kolor
-  } else {
-    themeColorMeta.setAttribute('content', '#ffffff'); // Jasny kolor
-  }
+  if (!themeColorMeta) return;
+
+  // wymuszenie przebudowy meta tagu (Chrome bug)
+  themeColorMeta.remove();
+  
+  const meta = document.createElement('meta');
+  meta.name = 'theme-color';
+  meta.id = 'theme-color-meta';
+  meta.content = theme === 'dark' ? '#262626' : '#ffffff';
+  
+  document.head.appendChild(meta);
 }
 
 // Załaduj zapisany motyw lub ustaw domyślnie ciemny
