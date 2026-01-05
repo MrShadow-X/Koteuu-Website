@@ -195,6 +195,14 @@
   color: var(--winter-sky);
 }
 
+[data-theme="dark"] .nav-toggle-btn {
+  color: var(--dark-text);
+}
+
+[data-theme="dark"] .nav-toggle-btn:hover {
+  color: var(--winter-sky);
+}
+
 /* Rozmiar ikon */
 .theme-toggle-btn ion-icon {
   font-size: 22px;
@@ -334,7 +342,7 @@ body {
 }
 
 .btn:hover {
-  transform: translateY(-3px) scale(1.05);
+  transform: scale(1.05);
   box-shadow: 0 10px 25px hsla(0, 0%, 0%, 0.25);
 }
 
@@ -452,6 +460,9 @@ body {
 .nav-toggle-btn { 
   font-size: 30px;
   transition: all var(--transition-1);
+  color: var(--black);
+  background: transparent;
+  border: none;
 }
 
 .nav-toggle-btn:hover {
@@ -486,7 +497,8 @@ body {
   left: 50%;
   width: calc(100% - 30px);
   transform: translateX(-50%);
-  background-color: var(--white-1);
+  background-color: transparent;
+  backdrop-filter: blur(10px);
   box-shadow: none;
   border-radius: var(--radius-12);
   overflow: hidden;
@@ -497,11 +509,6 @@ body {
   max-height: 0;
   opacity: 0;
   transition: all 0.35s var(--cubic-out);
-}
-
-/* Ciemniejszy cień w trybie ciemnym */
-[data-theme="dark"] .navbar {
-  box-shadow: none;
 }
 
 /* Gdy menu jest aktywne - rozsuwa się */
@@ -549,6 +556,37 @@ body {
 
 .navbar-link:hover {
   color: var(--winter-sky);
+}
+
+/* Przycisk w menu mobilnym */
+.navbar-item-btn {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+.navbar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-image: var(--gradient-2);
+  color: var(--white-1);
+  padding: 12px 25px;
+  border-radius: var(--radius-6);
+  font-weight: var(--fw-600);
+  text-align: center;
+  transition: all var(--transition-1);
+  box-shadow: 0 4px 15px hsla(260, 100%, 44%, 0.3);
+}
+
+.navbar-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px hsla(260, 100%, 44%, 0.5);
+}
+
+.navbar-btn i {
+  font-size: 1.6rem;
 }
 
 /*-----------------------------------*\
@@ -1094,6 +1132,10 @@ body {
   /* NAWIGACJA DESKTOPOWA - Ukrywa hamburger, pokazuje linki */
   .nav-toggle-btn { 
     display: none; 
+  }
+  
+   .navbar-item-btn {
+    display: none;
   }
 
   /* Resetuje style mobilne dla nawigacji */
