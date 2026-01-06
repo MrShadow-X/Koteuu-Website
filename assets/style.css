@@ -1155,6 +1155,28 @@ body {
   .navbar.active { 
     all: unset; 
   }
+  
+  /* Usuwa wszystkie efekty mobilne dla desktopu */
+  .navbar {
+    position: static;
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    transform: none;
+    width: auto;
+    visibility: visible;
+    max-height: none;
+    opacity: 1;
+  }
+  
+  [data-theme="dark"] .navbar {
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
 
   /* Nawigacja w poziomie */
   .navbar-list {
