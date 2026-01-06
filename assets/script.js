@@ -33,6 +33,12 @@ window.addEventListener("scroll", function () {
     header.classList.remove("active");
     backTopBtn.classList.remove("active");
   }
+  
+  // Zamyka menu mobilne przy scrollowaniu
+  if (navbar.classList.contains('active')) {
+    navbar.classList.remove('active');
+    navToggleBtn.classList.remove('active');
+  }
 });
 
 
