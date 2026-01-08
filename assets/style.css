@@ -409,8 +409,8 @@ body {
   position: fixed;
   top: -75px;  /* Początkowo ukryty powyżej */
   box-shadow: 0 4px 20px hsla(0, 0%, 0%, 0.1);
-  backdrop-filter: blur(10px);  /* Efekt rozmycia tła */
-  animation: slide-in 0.5s var(--cubic-out) forwards;
+/*   backdrop-filter: blur(10px);  /* Efekt rozmycia tła */
+   animation: slide-in 0.5s var(--cubic-out) forwards;
 }
 
 .header.active .navbar {
