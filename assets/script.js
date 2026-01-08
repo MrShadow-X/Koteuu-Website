@@ -25,8 +25,12 @@ for (let i = 0; i < navbarLinks.length; i++) {
 const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
 
+let lastScrollY = window.scrollY;
+
 window.addEventListener("scroll", function () {
-  if (window.scrollY >= 100) {
+  const currentScrollY = window.scrollY;
+  
+  if (currentScrollY >= 100) {
     header.classList.add("active");
     backTopBtn.classList.add("active");
   } else {
@@ -34,13 +38,14 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
   
-  // Zamyka menu mobilne przy scrollowaniu
-  if (navbar.classList.contains('active')) {
+  // Zamyka menu mobilne przy scrollowaniu (działa na telefonie)
+  if (Math.abs(currentScrollY - lastScrollY) > 1 && navbar.classList.contains('active')) {
     navbar.classList.remove('active');
     navToggleBtn.classList.remove('active');
   }
-});
-
+  
+  lastScrollY = currentScrollY;
+}, { passive: true });
 
 
 // ZMIANA MOTYWU - Dark/Light mode
