@@ -55,17 +55,20 @@ const themeColorMeta = document.getElementById('theme-color-meta');
 
 // Funkcja do aktualizacji koloru paska przeglądarki
 function updateThemeColor(theme) {
-  if (!themeColorMeta) return;
-
-  // wymuszenie przebudowy meta tagu (Chrome bug)
-  themeColorMeta.remove();
+  const themeColorMeta = document.getElementById('theme-color-meta');
   
-  const meta = document.createElement('meta');
-  meta.name = 'theme-color';
-  meta.id = 'theme-color-meta';
-  meta.content = theme === 'dark' ? '#262626' : '#ffffff';
+  if (!themeColorMeta) {
+    // Jeśli nie ma meta tagu, utwórz go
+    const meta = document.createElement('meta');
+    meta.name = 'theme-color';
+    meta.id = 'theme-color-meta';
+    meta.content = theme === 'dark' ? '#262626' : '#ffffff';
+    document.head.appendChild(meta);
+    return;
+  }
   
-  document.head.appendChild(meta);
+  // Po prostu zaktualizuj content
+  themeColorMeta.content = theme === 'dark' ? '#262626' : '#ffffff';
 }
 
 // Załaduj zapisany motyw lub ustaw domyślnie ciemny
