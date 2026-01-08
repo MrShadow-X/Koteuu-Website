@@ -409,7 +409,7 @@ body {
   position: fixed;
   top: -75px;  /* Początkowo ukryty powyżej */
   box-shadow: 0 4px 20px hsla(0, 0%, 0%, 0.1);
-/*   backdrop-filter: blur(10px);  /* Efekt rozmycia tła */
+/*   backdrop-filter: blur(10px);  /* Efekt rozmycia tła - bug with menu bar blur */
    animation: slide-in 0.5s var(--cubic-out) forwards;
 }
 
@@ -541,7 +541,8 @@ body {
   color: var(--black);
   font-size: var(--fs-4);
   font-weight: var(--fw-500);
-  padding: 16px 20px;
+  padding: 18px 20px;
+  margin-top: 5px;
   transition: all var(--transition-1);
   display: block;
   position: relative;
@@ -574,7 +575,7 @@ body {
 .navbar-item-btn {
   display: flex;
   justify-content: center;
-  padding: 10px 20px;
+  padding: 20px;
 }
 
 .navbar-btn {
