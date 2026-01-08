@@ -157,6 +157,76 @@
   color: var(--winter-sky);
 }
 
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  
+  /* Domyślnie WIDOCZNY (od razu gdy wchodzisz na stronę) */
+  opacity: 1;
+  visibility: visible;
+}
+
+[data-theme="dark"] .preloader {
+  background-color: var(--dark-bg);
+}
+
+/* Po dodaniu klasy .loaded - znika z fade out */
+.preloader.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader-bar {
+  width: 200px;
+  height: 4px;
+  background-color: var(--cultured-3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .preloader-bar {
+  background-color: var(--dark-border);
+}
+
+/* Poprawiona animacja - płynniejsze ładowanie */
+.preloader-progress {
+  height: 100%;
+  width: 0%;
+  background-image: var(--gradient-2);
+  border-radius: 2px;
+  animation: loading 2s infinite ease-in-out;
+}
+
+@keyframes loading {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 80%;
+  }
+  100% {
+    width: 100%;
+    left: 100%;
+  }
+}
+
+/* Zapobiegaj scrollowaniu podczas preloadera */
+body.preloader-active {
+  overflow: hidden;
+  height: 100vh;
+}
+
+
 /*-----------------------------------*\
   #PRZYCISK ZMIANY MOTYWU
   Przycisk słońce/księżyc do przełączania między trybem jasnym a ciemnym

@@ -1,5 +1,78 @@
 'use strict';
 
+
+// ============================================
+// PRELOADER SYSTEM
+// ============================================
+
+(function initPreloader() {
+  const preloader = document.getElementById('preloader');
+  const progressBar = preloader ? preloader.querySelector('.preloader-progress') : null;
+  const themeToggleBtn = document.querySelector('[data-theme-toggle-btn]');
+  
+  if (!preloader) return;
+  
+  // 1. PRELOADER STARTOWY (pokazuje się od razu)
+  document.body.classList.add('preloader-active');
+  
+  // Funkcja do ukrywania preloadera
+  function hidePreloader(withDelay = false) {
+    if (withDelay) {
+      setTimeout(() => {
+        preloader.classList.add('loaded');
+        setTimeout(() => {
+          preloader.style.display = 'none';
+          document.body.classList.remove('preloader-active');
+        }, 500);
+      }, 300);
+    } else {
+      preloader.classList.add('loaded');
+      setTimeout(() => {
+        preloader.style.display = 'none';
+        document.body.classList.remove('preloader-active');
+      }, 500);
+    }
+  }
+  
+  // Ukryj gdy strona się załaduje
+  if (document.readyState === 'complete') {
+    hidePreloader(true);
+  } else {
+    window.addEventListener('load', () => hidePreloader(true));
+    document.addEventListener('DOMContentLoaded', () => hidePreloader(true));
+    
+    // Fallback
+    setTimeout(() => hidePreloader(true), 3000);
+  }
+  
+  // 2. PRELOADER PRZY ZMIANIE MOTYWU
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', function() {
+      // Pokaż preloader
+      preloader.style.display = 'flex';
+      preloader.classList.remove('loaded');
+      document.body.classList.add('preloader-active');
+      
+      // Restartuj animację paska
+      if (progressBar) {
+        progressBar.style.animation = 'none';
+        void progressBar.offsetWidth;
+        progressBar.style.animation = 'loading 1s ease-in-out';
+      }
+      
+      // Ukryj preloader po animacji
+      setTimeout(() => {
+        preloader.classList.add('loaded');
+        setTimeout(() => {
+          preloader.style.display = 'none';
+          document.body.classList.remove('preloader-active');
+        }, 500);
+      }, 1000);
+    });
+  }
+})();
+
+
 // NAWIGACJA MOBILNA - Toggle menu
 const navbar = document.querySelector("[data-navbar]");
 const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
