@@ -590,7 +590,10 @@ body {
   font-weight: var(--fw-600);
   text-align: center;
   transition: all var(--transition-1);
-  box-shadow: 0 4px 15px hsla(260, 100%, 44%, 0.3);
+  /* Fioletowy cień dookoła */
+  box-shadow: 
+    0 0 20px rgba(138, 43, 226, 0.5), /* Rozmyty cień dookoła */
+    0 0 0 0.5px rgba(138, 43, 226, 0.3); /* Delikatna obwódka */
 }
 
 .navbar-btn:hover {
