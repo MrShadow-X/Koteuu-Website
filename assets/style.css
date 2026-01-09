@@ -509,7 +509,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
+  flex-wrap: nowrap;
 }
 
 /* Logo */
@@ -519,6 +520,8 @@ body {
   font-weight: var(--fw-700);
   line-height: 1;
   transition: all var(--transition-1);
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 /* Efekt hover na logo - kolorowy gradient */
@@ -534,7 +537,8 @@ body {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
 /* Przycisk menu hamburger (tylko na mobile) */
@@ -1088,6 +1092,31 @@ body {
   Style dla różnych rozmiarów ekranów
 \*-----------------------------------*/
 
+/* EKRANY < 400px (bardzo małe telefony) */
+@media (max-width: 399px) {
+  .logo {
+    font-size: 2.8rem;
+  }
+  
+  .header-actions {
+    gap: 5px;
+  }
+  
+  .theme-toggle-btn {
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+  }
+  
+  .nav-toggle-btn {
+    font-size: 25px;
+  }
+  
+  .header .btn {
+    display: none !important;
+  }
+}
+
 /* EKRANY >= 480px (małe tablety) */
 @media (min-width: 480px) {
   
@@ -1253,18 +1282,26 @@ body {
   }
 
   /* Nawigacja w poziomie */
-  .navbar-list {
-    display: flex;
-    gap: 5px;
-  }
+	.navbar-list {
+	  display: flex;
+	  gap: 5px;
+	  flex-wrap: nowrap;
+	}
+
+	.navbar-link {
+	  padding: 16px 15px;
+	  font-size: 1.6rem;
+	  white-space: nowrap;
+	}
 
   .navbar-item:not(:last-child) { 
     border-block-end: none; 
   }
 
-  .navbar-link { 
-    --fs-4: 2rem; 
-  }
+	.navbar-link { 
+	  --fs-4: 1.6rem;
+	  padding: 10px 15px;
+	}
 
   /* Przycisk header bez margina (jest miejsce) */
   .header .btn {
