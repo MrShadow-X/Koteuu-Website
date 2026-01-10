@@ -1288,19 +1288,14 @@ body {
 	  flex-wrap: nowrap;
 	}
 
-	.navbar-link {
-	  padding: 16px 15px;
-	  font-size: 1.6rem;
-	  white-space: nowrap;
-	}
-
   .navbar-item:not(:last-child) { 
     border-block-end: none; 
   }
 
 	.navbar-link { 
-	  --fs-4: 1.6rem;
-	  padding: 10px 15px;
+	  --fs-4: 1.8rem;
+	  padding: 16px 20px;
+	  white-space: nowrap;
 	}
 
   /* Przycisk header bez margina (jest miejsce) */
