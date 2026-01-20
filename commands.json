@@ -1,0 +1,1882 @@
+[
+  {
+    "name": "automod",
+    "description": "Przełącza działanie automatycznej moderacji zarządzanej przez bota.",
+    "aliases": [
+      "am",
+      "automoderacja",
+      "moderacja",
+      "moderator"
+    ],
+    "category": "Ustawienia",
+    "cooldown": 10,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "ManageGuild",
+      "ModerateMembers"
+    ],
+    "botPermissions": [
+      "EmbedLinks",
+      "ModerateMembers"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "autorole",
+    "description": "Ustawia rolę, która będzie automatycznie nadawana dla nowych użytkowników i botów.",
+    "aliases": [
+      "set-role",
+      "setuprole",
+      "setrole",
+      "joinrole"
+    ],
+    "category": "Ustawienia",
+    "usage": "[rola użytkowników] [rola botów]",
+    "cooldown": 10,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "ManageGuild"
+    ],
+    "botPermissions": [
+      "EmbedLinks",
+      "ManageMembers"
+    ],
+    "options": [
+      {
+        "name": "rola-użytkowników",
+        "description": "Rola, która będzie automatycznie nadawana dla nowych użytkowników.",
+        "type": 8,
+        "required": false
+      },
+      {
+        "name": "rola-botów",
+        "description": "Rola, która będzie automatycznie nadawana dla nowych botów.",
+        "type": 8,
+        "required": false
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "backup",
+    "description": "Tworzy kopię zapasową kanałów, uprawnień, ustawień serwera i wiadomości.",
+    "aliases": [
+      "restore",
+      "kopia",
+      "kopia-zapasowa",
+      "przywróć"
+    ],
+    "category": "Ustawienia",
+    "cooldown": 30,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "Administrator"
+    ],
+    "botPermissions": [
+      "EmbedLinks",
+      "Administrator"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "setgames",
+    "description": "Ustawia kanał, na którym będą pojawiać się powiadomienia o darmowych grach na Epic Games.",
+    "aliases": [
+      "set-games",
+      "setupgames",
+      "setfreegames",
+      "setfreegames",
+      "gamessetup"
+    ],
+    "category": "Ustawienia",
+    "usage": "[kanał]",
+    "cooldown": 10,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "ManageGuild"
+    ],
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "kanał",
+        "description": "Kanał, na którym mają pojawiać się powiadomienia.",
+        "type": 7,
+        "required": false,
+        "channel_types": [
+          0,
+          5
+        ]
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "setlanguage",
+    "description": "Ustawia wybrany język bota na serwerze.",
+    "aliases": [
+      "slanguage",
+      "language",
+      "set-language",
+      "s-language",
+      "lang",
+      "setlang",
+      "set-lang",
+      "slang"
+    ],
+    "category": "Ustawienia",
+    "usage": "[język]",
+    "cooldown": 10,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "ManageGuild"
+    ],
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "język",
+        "description": "Język, który będzie używany przez bota tym serwerze.",
+        "type": 3,
+        "required": false,
+        "choices": [
+          {
+            "name": "🇵🇱 · Język Polski",
+            "value": "pl_PL"
+          },
+          {
+            "name": "🇬🇧 · Język Angielski",
+            "value": "en_US"
+          }
+        ]
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "setlogs",
+    "description": "Ustawia kanał na którym bedą wysyłane logi wiadomości systemowych oraz wiadomości użytkowników.",
+    "aliases": [
+      "set-logs",
+      "logs",
+      "logi",
+      "setuplogs",
+      "setup-logs"
+    ],
+    "category": "Ustawienia",
+    "usage": "[kanał]",
+    "cooldown": 10,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "ManageGuild"
+    ],
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "kanał",
+        "description": "Kanał, na którym mają być wysyłane logi.",
+        "type": 7,
+        "required": false,
+        "channel_types": [
+          0,
+          5
+        ]
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "setprefix",
+    "description": "Ustawia nowy prefix komend na serwerze.",
+    "aliases": [
+      "sprefix",
+      "prefix",
+      "set-prefix",
+      "s-prefix"
+    ],
+    "category": "Ustawienia",
+    "usage": "[prefix]",
+    "cooldown": 10,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "ManageGuild"
+    ],
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "prefix",
+        "description": "Nowy prefix, który będzie używany do korzystania z komend na tym serwerze.",
+        "type": 3,
+        "required": false,
+        "max_length": 3
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "ticketsetup",
+    "description": "Pozwala włączyć i skonfigurować funkcję ticketów na serwerze.",
+    "aliases": [
+      "set-ticket",
+      "setticket",
+      "seticket",
+      "setupticket",
+      "ticket-setup"
+    ],
+    "category": "Ustawienia",
+    "usage": "[kanał] [kategoria] [rola]",
+    "cooldown": 10,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "ManageGuild"
+    ],
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "kanał",
+        "description": "Kanał, na który zostanie wysłana wiadomość umożliwiająca tworzenie ticketów.",
+        "type": 7,
+        "required": false,
+        "channel_types": [
+          0,
+          5
+        ]
+      },
+      {
+        "name": "kategoria",
+        "description": "Kategoria, w której będą tworzone nowe tickety.",
+        "type": 7,
+        "required": false,
+        "channel_types": [
+          4
+        ]
+      },
+      {
+        "name": "rola",
+        "description": "Rola, która będzie miała możliwość zarządzania i wyświetlania ticketów.",
+        "type": 8,
+        "required": false
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "voicesetup",
+    "description": "Ustawia kanał, dzięki któremu użytkownicy będą mogli tworzyć własne kanały głosowe.",
+    "aliases": [
+      "set-voice",
+      "setvc",
+      "setvoice",
+      "setupvc",
+      "vcsetup"
+    ],
+    "category": "Ustawienia",
+    "usage": "[kanał] [format]",
+    "cooldown": 10,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "ManageGuild"
+    ],
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "kanał",
+        "description": "Kanał, który po dołączeniu użytkownika stworzy jego kanał.",
+        "type": 7,
+        "required": false,
+        "channel_types": [
+          2
+        ]
+      },
+      {
+        "name": "format",
+        "description": "Format tworzonych kanałów. Dostępne zmienne: {username}, {nickname}, {displayName}",
+        "type": 3,
+        "required": false,
+        "min_length": 5,
+        "max_length": 20
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "roll",
+    "description": "Rzuca kostką do gry i wysyła wylosowaną liczbę oczek.",
+    "category": "Rozrywka",
+    "aliases": [
+      "dice"
+    ],
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "rps",
+    "description": "Rozpoczyna grę z botem w papier, kamień, nożyce.",
+    "category": "Rozrywka",
+    "aliases": [
+      "papierkamien",
+      "rockpaperscissors",
+      "pkn",
+      "kpn"
+    ],
+    "usage": "[kamień/papier/nożyce]",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "wybór",
+        "description": "Wybierz Papier, Kamień lub Nożyce, aby zagrać.",
+        "type": 3,
+        "required": false,
+        "choices": [
+          {
+            "name": "🧻 · Papier",
+            "value": "paper"
+          },
+          {
+            "name": "🪨 · Kamień",
+            "value": "rock"
+          },
+          {
+            "name": "✂️ · Nożyce",
+            "value": "scissors"
+          }
+        ]
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "changelog",
+    "description": "Wyświetla informacje o nowych zmianach i aktualizacjach bota.",
+    "aliases": [
+      "update",
+      "updates",
+      "updatelog"
+    ],
+    "category": "Informacyjne",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "voiceChannel": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "freegame",
+    "description": "Wyświetla informacje o darmowych grach do odebrania na Epic Games.",
+    "aliases": [
+      "freegames",
+      "epicgames",
+      "epicfreegames",
+      "darmowegry",
+      "darmowagra",
+      "fgame"
+    ],
+    "category": "Informacyjne",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "voiceChannel": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "help",
+    "description": "Wyświetla listę wszystkich komend, lub szczegółowe informacje na temat wybranej komendy.",
+    "aliases": [
+      "pomoc",
+      "?",
+      "komendy",
+      "komenda"
+    ],
+    "usage": "[komenda]",
+    "category": "Informacyjne",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "komenda",
+        "description": "Nazwa komendy, dla której chcesz zobaczyć szczegółowe informacje.",
+        "type": 3,
+        "required": false
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "members",
+    "description": "Wyświetla ilość użytkowników na serwerze.",
+    "aliases": [
+      "users"
+    ],
+    "category": "Informacyjne",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "owner",
+    "description": "Wyświetla informacje o właścicielu bota.",
+    "aliases": [
+      "właściciel",
+      "wlasciciel",
+      "creator"
+    ],
+    "category": "Informacyjne",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "voiceChannel": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "ping",
+    "description": "Wyświetla informacje o opóźnieniach bota.",
+    "aliases": [
+      "lag"
+    ],
+    "category": "Informacyjne",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "voiceChannel": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "roleinfo",
+    "description": "Wyświetla informacje o wybranej roli na serwerze.",
+    "aliases": [
+      "ri",
+      "role",
+      "rola"
+    ],
+    "usage": "<rola>",
+    "category": "Informacyjne",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "rola",
+        "description": "Rola, o której chcesz zobaczyć informacje.",
+        "type": 8,
+        "required": true
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "uptime",
+    "description": "Wyświetla informacje o czasie działania bota.",
+    "aliases": [
+      ""
+    ],
+    "category": "Informacyjne",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "voiceChannel": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "userinfo",
+    "description": "Wyświetla informacje o wybranym użytkowniku.",
+    "aliases": [
+      "ui",
+      "uzytkownik",
+      "użytkownik"
+    ],
+    "usage": "[użytkownik]",
+    "category": "Informacyjne",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "użytkownik",
+        "description": "Użytkownik, o którym chcesz zobaczyć informacje.",
+        "type": 6,
+        "required": false
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "ban",
+    "description": "Banuje wybranego użytkownika z serwera.",
+    "aliases": [
+      "zbanuj",
+      "banuj"
+    ],
+    "category": "Moderacja",
+    "usage": "<użytkownik> [powód]",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "BanMembers"
+    ],
+    "botPermissions": [
+      "EmbedLinks",
+      "BanMembers"
+    ],
+    "options": [
+      {
+        "name": "użytkownik",
+        "description": "Użytkownik, którego chcesz zbanować.",
+        "type": 6,
+        "required": true
+      },
+      {
+        "name": "powód",
+        "description": "Powód, dla którego chcesz zbanować użytkownika.",
+        "type": 3,
+        "required": false
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "banlist",
+    "description": "Wyświetla listę osób zbanowanych na tym serwerze.",
+    "category": "Moderacja",
+    "aliases": [
+      "banned",
+      "blist",
+      "zablokowani",
+      "bannedlist"
+    ],
+    "cooldown": 5,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "BanMembers"
+    ],
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "kick",
+    "description": "Wyrzuca wybranego użytkownika z serwera.",
+    "category": "Moderacja",
+    "aliases": [
+      "wyrzuc",
+      "wyrzuć",
+      "wykop"
+    ],
+    "usage": "<użytkownik> [powód]",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "KickMembers"
+    ],
+    "botPermissions": [
+      "EmbedLinks",
+      "KickMembers"
+    ],
+    "options": [
+      {
+        "name": "użytkownik",
+        "description": "Użytkownik, którego chcesz wyrzucić.",
+        "type": 6,
+        "required": true
+      },
+      {
+        "name": "powód",
+        "description": "Powód, dla którego chcesz wyrzucić użytkownika.",
+        "type": 3,
+        "required": false
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "lock",
+    "description": "Blokuje możliwość wysyłania wiadomości na kanale.",
+    "aliases": [
+      "lock-channel",
+      "lockchannel"
+    ],
+    "category": "Moderacja",
+    "usage": "[powód]",
+    "cooldown": 10,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "ManageChannels"
+    ],
+    "botPermissions": [
+      "EmbedLinks",
+      "ManageChannels"
+    ],
+    "options": [
+      {
+        "name": "powód",
+        "description": "Powód, dla którego chcesz zablokować kanał.",
+        "type": 3,
+        "required": false
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "nickname",
+    "description": "Pozwala zarządzać pseudonimem wybranego użytkownika na serwerze.",
+    "category": "Moderacja",
+    "aliases": [
+      "nick",
+      "displayname"
+    ],
+    "usage": "<change/remove> <użytkownik> [pseudonim]",
+    "cooldown": 5,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "ManageNicknames"
+    ],
+    "botPermissions": [
+      "ManageNicknames"
+    ],
+    "options": [
+      {
+        "name": "change",
+        "description": "Zmień pseudomim na serwerze.",
+        "type": 1,
+        "options": [
+          {
+            "name": "pseudonim",
+            "description": "Podaj nowy pseudonim jaki chcesz ustawić. (%s - Wyświetlana Nazwa Użytkownika)",
+            "type": 3,
+            "required": true
+          },
+          {
+            "name": "użytkownik",
+            "description": "Użytkownik, dla którego chcesz zmienić pseudonim.",
+            "type": 6,
+            "required": false
+          }
+        ]
+      },
+      {
+        "name": "remove",
+        "description": "Usuń pseudomim na serwerze.",
+        "type": 1,
+        "options": [
+          {
+            "name": "użytkownik",
+            "description": "Użytkownik, dla którego chcesz usunąć pseudonim.",
+            "type": 6,
+            "required": false
+          }
+        ]
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "nuke",
+    "description": "Usuwa wszystkie wiadomości na kanale.",
+    "category": "Moderacja",
+    "aliases": [
+      "purgechannel",
+      "cleanchannel"
+    ],
+    "cooldown": 5,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "ManageChannels",
+      "ManageMessages"
+    ],
+    "botPermissions": [
+      "ManageChannels",
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "purge",
+    "description": "Usuwa podaną ilości wiadomości na kanale.",
+    "category": "Moderacja",
+    "aliases": [
+      "clean"
+    ],
+    "usage": "<ilość>",
+    "cooldown": 5,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "ManageMessages"
+    ],
+    "botPermissions": [
+      "ManageMessages",
+      "ReadMessageHistory"
+    ],
+    "options": [
+      {
+        "name": "ilość",
+        "description": "Ilość wiadomości, którą chcesz usunąć.",
+        "type": 10,
+        "min_value": 2,
+        "max_value": 100,
+        "required": true
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "timeout",
+    "description": "Wysyła wybranego użytkownika na przerwę.",
+    "aliases": [
+      "tout",
+      "przerwa",
+      "mute"
+    ],
+    "category": "Moderacja",
+    "usage": "<użytkownik> <czas> [powód]",
+    "cooldown": 5,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "ModerateMembers"
+    ],
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "użytkownik",
+        "description": "Użytkownik, którego chcesz wysłać na przerwę.",
+        "type": 6,
+        "required": true
+      },
+      {
+        "name": "czas",
+        "description": "Czas, na jaki chcesz wysłać użytkownika na przerwę.",
+        "type": 3,
+        "required": true
+      },
+      {
+        "name": "powód",
+        "description": "Powód, dla którego chcesz wysłać użytkownika na przerwę.",
+        "type": 3,
+        "required": false
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "unban",
+    "description": "Odbanowywuje wybranego użytkownika z serwera.",
+    "aliases": [
+      "odbanuj"
+    ],
+    "category": "Moderacja",
+    "usage": "<użytkownik> [powód]",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "BanMembers"
+    ],
+    "botPermissions": [
+      "EmbedLinks",
+      "BanMembers"
+    ],
+    "options": [
+      {
+        "name": "użytkownik",
+        "description": "Użytkownik, którego chcesz odbanować.",
+        "type": 3,
+        "required": true,
+        "autocomplete": true
+      },
+      {
+        "name": "powód",
+        "description": "Powód, dla którego chcesz odbanować użytkownika.",
+        "type": 3,
+        "required": false
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "unwarn",
+    "description": "Usuwa ostrzeżenie dla wybranego użytkownika.",
+    "aliases": [
+      "odostrzeż",
+      "odostrzez",
+      "unwarning",
+      "removewarn"
+    ],
+    "category": "Moderacja",
+    "usage": "<użytkownik> <ID ostrzeżenia>",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "ModerateMembers"
+    ],
+    "botPermissions": [
+      "EmbedLinks",
+      "ModerateMembers"
+    ],
+    "options": [
+      {
+        "name": "użytkownik",
+        "description": "Użytkownik, którego chcesz usunąć ostrzeżenie.",
+        "type": 6,
+        "required": true
+      },
+      {
+        "name": "id",
+        "description": "ID ostrzeżenia, które chcesz usunąć.",
+        "type": 4,
+        "required": true
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "warn",
+    "description": "Dodaje ostrzeżenie dla wybranego użytkownika.",
+    "aliases": [
+      "ostrzeż",
+      "ostrzez",
+      "warning",
+      "addwarn"
+    ],
+    "category": "Moderacja",
+    "usage": "<użytkownik> [powód]",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "ModerateMembers"
+    ],
+    "botPermissions": [
+      "EmbedLinks",
+      "ModerateMembers"
+    ],
+    "options": [
+      {
+        "name": "użytkownik",
+        "description": "Użytkownik, dla którego chcesz dodać ostrzeżenie.",
+        "type": 6,
+        "required": true
+      },
+      {
+        "name": "powód",
+        "description": "Powód, dla którego chcesz ostrzec użytkownika.",
+        "type": 3,
+        "required": false
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "warnlist",
+    "description": "Wyświetla listę ostrzeżeń dla wybranego użytkownika.",
+    "aliases": [
+      "warnings",
+      "ostrzezenia",
+      "ostrzeżenia",
+      "warns"
+    ],
+    "category": "Moderacja",
+    "usage": "[użytkownik]",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "użytkownik",
+        "description": "Użytkownik, dla którego chcesz sprawdzić ostrzeżenia.",
+        "type": 6,
+        "required": false
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "8d",
+    "description": "Przełącza filtr \"8D\" dla odtwarzanej kolejki.",
+    "aliases": [
+      "surround"
+    ],
+    "category": "Muzyka",
+    "cooldown": 5,
+    "isOwner": false,
+    "isNSFW": false,
+    "voiceChannel": true,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "autoplay",
+    "description": "Przełącza automatyczne odtwarzanie muzyki po zakończeniu kolejki.",
+    "aliases": [
+      "ap"
+    ],
+    "category": "Muzyka",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "voiceChannel": true,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "back",
+    "description": "Odtwarza poprzedni utwór z kolejki.",
+    "aliases": [
+      "previous",
+      "prev"
+    ],
+    "category": "Muzyka",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "voiceChannel": true,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "bassboost",
+    "description": "Przełącza filtr \"BassBoost\" dla odtwarzanej kolejki.",
+    "aliases": [
+      "bb",
+      "bass"
+    ],
+    "category": "Muzyka",
+    "cooldown": 5,
+    "isOwner": false,
+    "isNSFW": false,
+    "voiceChannel": true,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "clear",
+    "description": "Czyści kolejkę odtwarzania.",
+    "aliases": [
+      "clearqueue",
+      "wyczysc"
+    ],
+    "category": "Muzyka",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "voiceChannel": true,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "loop",
+    "description": "Przełącz powtarzanie utworu lub całej kolejki.",
+    "aliases": [
+      "lp",
+      "powtarzanie",
+      "repeat"
+    ],
+    "category": "Muzyka",
+    "usage": "<utwór/kolejka/wyłącz>",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "voiceChannel": true,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "sposób",
+        "description": "Sposób, w jaki chcesz włączyć lub wyłączyć powtarzanie odtwarzania.",
+        "type": 3,
+        "required": true,
+        "choices": [
+          {
+            "name": "Utwór",
+            "value": "Track"
+          },
+          {
+            "name": "Cała Kolejka",
+            "value": "Queue"
+          },
+          {
+            "name": "Wyłącz",
+            "value": "Off"
+          }
+        ]
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "pause",
+    "description": "Wstrzymuje odtwarzanie muzyki.",
+    "aliases": [
+      "pauza",
+      "pauzuj",
+      "wstrzymaj"
+    ],
+    "category": "Muzyka",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "voiceChannel": true,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "play",
+    "description": "Odtwarza wybrany utwór na kanale głosowym.",
+    "aliases": [
+      "p",
+      "muzyka"
+    ],
+    "category": "Muzyka",
+    "usage": "<tytuł/URL>",
+    "cooldown": 5,
+    "isOwner": false,
+    "isNSFW": false,
+    "voiceChannel": true,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "tytuł",
+        "description": "Tytuł lub adres URL wybranego utworu.",
+        "type": 3,
+        "required": true,
+        "autocomplete": true
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "queue",
+    "description": "Wyświetla kolejkę odtwarzania.",
+    "aliases": [
+      "kolejka",
+      "tracks",
+      "utwory"
+    ],
+    "category": "Muzyka",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "voiceChannel": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "replay",
+    "description": "Ponownie odtwarza aktualny utwór.",
+    "aliases": [
+      "powtórz",
+      "powtorz",
+      "rp"
+    ],
+    "category": "Muzyka",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "voiceChannel": true,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "resume",
+    "description": "Wznawia odtwarzanie muzyki.",
+    "aliases": [
+      "re",
+      "wznów",
+      "wznow"
+    ],
+    "category": "Muzyka",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "voiceChannel": true,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "shuffle",
+    "description": "Zmienia kolejność odtwarzania utworów w kolejce na losową.",
+    "aliases": [
+      "pomieszaj"
+    ],
+    "category": "Muzyka",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "voiceChannel": true,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "skip",
+    "description": "Odtwarza następny utwór z kolejki.",
+    "aliases": [
+      "sk",
+      "s",
+      "pomiń",
+      "pomin"
+    ],
+    "category": "Muzyka",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "voiceChannel": true,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "stop",
+    "description": "Zatrzymuje odtwarzanie oraz czyści kolejkę na serwerze.",
+    "aliases": [
+      "leave",
+      "disconnect"
+    ],
+    "category": "Muzyka",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "voiceChannel": true,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "volume",
+    "description": "Ustawia głośność dla aktualnie odtwarzanej kolejki.",
+    "aliases": [
+      "vol",
+      "głośność",
+      "glosnosc"
+    ],
+    "category": "Muzyka",
+    "usage": "<0-100>",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "voiceChannel": true,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "wartość",
+        "type": 10,
+        "description": "Wartość głośności jaką chcesz ustawić.",
+        "required": true,
+        "min_value": 0,
+        "max_value": 100
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "blacklist",
+    "description": "Wyświetla, dodaje lub usuwa osoby z czarnej listy.",
+    "aliases": [
+      "bl"
+    ],
+    "usage": "[add/remove <ID>]",
+    "category": "Właściciel",
+    "cooldown": 0,
+    "isOwner": true,
+    "isNSFW": false,
+    "voiceChannel": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "checkgames",
+    "description": "Ręcznie wyszukuje serwery bez powiadomień o nowych darmowych grach.",
+    "aliases": [
+      "checkgame",
+      "cgames",
+      "cg"
+    ],
+    "category": "Właściciel",
+    "cooldown": 0,
+    "isOwner": true,
+    "isNSFW": false,
+    "voiceChannel": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "getinvite",
+    "description": "Wysyła link z zaproszeniem do wybranego serwera.",
+    "aliases": [
+      "ginvite"
+    ],
+    "category": "Właściciel",
+    "cooldown": 0,
+    "isOwner": true,
+    "isNSFW": false,
+    "voiceChannel": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "playerinfo",
+    "description": "Wyświetla informacje dotyczące odtwarzacza muzyki na serwerze.",
+    "aliases": [
+      "pi"
+    ],
+    "category": "Właściciel",
+    "cooldown": 0,
+    "isOwner": true,
+    "isNSFW": false,
+    "voiceChannel": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "reboot",
+    "description": "Wykonuje restart całego bota.",
+    "aliases": [
+      "rb",
+      "restart"
+    ],
+    "category": "Właściciel",
+    "cooldown": 0,
+    "isOwner": true,
+    "isNSFW": false,
+    "voiceChannel": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "reconnect",
+    "description": "Ponownie łączy się z serwerami LavaLink.",
+    "aliases": [
+      "rc",
+      "rclavalink"
+    ],
+    "category": "Właściciel",
+    "cooldown": 0,
+    "isOwner": true,
+    "isNSFW": false,
+    "voiceChannel": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "reload",
+    "description": "Przeładowywuje wybraną komendę.",
+    "aliases": [
+      "rl"
+    ],
+    "category": "Właściciel",
+    "cooldown": 0,
+    "isOwner": true,
+    "isNSFW": false,
+    "voiceChannel": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "folder",
+        "description": "Nazwa folderu, w którym znajduje się plik, który chcesz przeładować.",
+        "type": 3,
+        "required": true
+      },
+      {
+        "name": "plik",
+        "description": "Nazwa pliku, który chcesz przeładować.",
+        "type": 3,
+        "required": true
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "say",
+    "description": "Pozwala wysłać dowolną wiadomość jako bot.",
+    "category": "Właściciel",
+    "aliases": [
+      "embed",
+      "sendmessage",
+      "message",
+      "msg"
+    ],
+    "usage": "<URL>",
+    "cooldown": 0,
+    "isOwner": true,
+    "isNSFW": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "serverlist",
+    "description": "Wyświetla listę wszystkich serwerów na których znajduję się Koteuu.",
+    "aliases": [
+      "sl",
+      "server-list",
+      "servers"
+    ],
+    "category": "Właściciel",
+    "cooldown": 0,
+    "isOwner": true,
+    "isNSFW": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "test",
+    "description": "Test command.",
+    "aliases": [
+      "debug"
+    ],
+    "category": "Właściciel",
+    "cooldown": 0,
+    "isOwner": true,
+    "isNSFW": false,
+    "voiceChannel": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "mcserver",
+    "description": "Wyświetla informacje dotyczące wybranego serwera Minecraft.",
+    "category": "Narzędzia",
+    "aliases": [
+      "server"
+    ],
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "usage": "<adres IP>",
+    "options": [
+      {
+        "name": "adres",
+        "description": "Adres IP serwera, dla którego chcesz sprawdzić informacje.",
+        "type": 3,
+        "required": true
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "mcskin",
+    "description": "Wyświetla skórkę wybranego gracza z Minecrafta.",
+    "category": "Narzędzia",
+    "aliases": [
+      "skin"
+    ],
+    "usage": "<nick>",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "nick",
+        "description": "Nick gracza, dla którego chcesz wyświetlić skórkę.",
+        "type": 3,
+        "required": true
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "qrcode",
+    "description": "Generuje kod QR z podanym tekstem lub linkiem.",
+    "category": "Narzędzia",
+    "aliases": [
+      "qr"
+    ],
+    "usage": "<tekst/URL>",
+    "cooldown": 5,
+    "isOwner": false,
+    "isNSFW": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "tekst",
+        "description": "Tekst lub link, dla którego chcesz wygenerować kod QR.",
+        "type": 3,
+        "required": true
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "screenshot",
+    "description": "Wykonuje zrzut ekranu dla podanej strony internetowej.",
+    "category": "Narzędzia",
+    "aliases": [
+      "ss",
+      "zrzutekranu",
+      "webshot",
+      "webss"
+    ],
+    "usage": "<URL>",
+    "cooldown": 120,
+    "isOwner": false,
+    "isNSFW": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "link",
+        "description": "Link strony, dla której chcesz wykonać zrzut ekranu.",
+        "type": 3,
+        "required": true
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "weather",
+    "description": "Wyświetla informacje o pogodzie dla wybranego miejsca.",
+    "category": "Narzędzia",
+    "aliases": [
+      "pogoda",
+      "temperatura",
+      "temperature"
+    ],
+    "usage": "<miejscowość/lokalizacja>",
+    "cooldown": 5,
+    "isOwner": false,
+    "isNSFW": false,
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "lokalizacja",
+        "description": "Nazwa lokalizacji, dla której chcesz sprawdzić pogodę.",
+        "type": 3,
+        "required": true
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "voice-add",
+    "description": "Umożliwia wybranemu użytkownikowi dołączanie na zablokowany tymczasowy kanał głosowy.",
+    "category": "Głosowe",
+    "aliases": [
+      "vc-add",
+      "vcadd",
+      "voiceadd",
+      "vadd",
+      "v-add"
+    ],
+    "usage": "<użytkownik>",
+    "cooldown": 5,
+    "isOwner": false,
+    "isNSFW": false,
+    "isVoiceOwner": true,
+    "botPermissions": [
+      "ManageChannels"
+    ],
+    "options": [
+      {
+        "name": "użytkownik",
+        "description": "Użytkownik, który ma otrzymać uprawnienie do dołączania.",
+        "type": 6,
+        "required": true
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "voice-ban",
+    "description": "Banuje wybranego użytkownika na tymczasowym kanale głosowym.",
+    "category": "Głosowe",
+    "aliases": [
+      "vc-ban",
+      "vcban",
+      "voiceban",
+      "vban",
+      "v-ban"
+    ],
+    "usage": "<użytkownik>",
+    "cooldown": 5,
+    "isOwner": false,
+    "isNSFW": false,
+    "isVoiceOwner": true,
+    "botPermissions": [
+      "MoveMembers",
+      "ManageChannels"
+    ],
+    "options": [
+      {
+        "name": "użytkownik",
+        "description": "Użytkownik, którego chcesz zbanować.",
+        "type": 6,
+        "required": true
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "voice-bitrate",
+    "description": "Zmienia prędkość strumieniowania danych tymczasowego kanału głosowego.",
+    "category": "Głosowe",
+    "aliases": [
+      "vc-bitrate",
+      "vcbitrate",
+      "voicebitrate",
+      "vbitrate",
+      "v-bitrate"
+    ],
+    "usage": "<wartość>",
+    "cooldown": 30,
+    "isOwner": false,
+    "isNSFW": false,
+    "isVoiceOwner": true,
+    "botPermissions": [
+      "ManageChannels"
+    ],
+    "options": [
+      {
+        "name": "wartość",
+        "description": "Wartość, która ma być prędkością strumienia danych. (Wartość w Kb/s)",
+        "type": 4,
+        "required": true,
+        "max_length": 384,
+        "min_length": 8
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "voice-kick",
+    "description": "Wyrzuca wybranego użytkownika z tymczasowego kanału głosowego.",
+    "category": "Głosowe",
+    "aliases": [
+      "vc-kick",
+      "vckick",
+      "voicekick",
+      "vkick",
+      "v-kick"
+    ],
+    "usage": "<użytkownik>",
+    "cooldown": 3,
+    "isOwner": false,
+    "isNSFW": false,
+    "isVoiceOwner": true,
+    "botPermissions": [
+      "MoveMembers"
+    ],
+    "options": [
+      {
+        "name": "użytkownik",
+        "description": "Użytkownik, którego chcesz wyrzucić.",
+        "type": 6,
+        "required": true
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "voice-limit",
+    "description": "Zmienia limit użytkowników tymczasowego kanału głosowego.",
+    "category": "Głosowe",
+    "aliases": [
+      "vc-limit",
+      "vclimit",
+      "voicelimit",
+      "vlimit",
+      "v-limit"
+    ],
+    "usage": "<liczba>",
+    "cooldown": 10,
+    "isOwner": false,
+    "isNSFW": false,
+    "isVoiceOwner": true,
+    "botPermissions": [
+      "ManageChannels"
+    ],
+    "options": [
+      {
+        "name": "liczba",
+        "description": "Liczba, która ma być limitem użytkowników. (0 = Brak Limitu)",
+        "type": 4,
+        "required": true,
+        "max_length": 99,
+        "min_length": 0
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "voice-lock",
+    "description": "Blokuje możliwość dołączania użytkowników na tymczasowy kanał głosowy.",
+    "category": "Głosowe",
+    "aliases": [
+      "vc-lock",
+      "vclock",
+      "voicelock",
+      "vlock",
+      "v-lock"
+    ],
+    "cooldown": 5,
+    "isOwner": false,
+    "isNSFW": false,
+    "isVoiceOwner": true,
+    "botPermissions": [
+      "ManageChannels"
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "voice-name",
+    "description": "Zmienia nazwę tymczasowego kanału głosowego.",
+    "category": "Głosowe",
+    "aliases": [
+      "vc-name",
+      "vcname",
+      "voicename",
+      "vname",
+      "v-name"
+    ],
+    "usage": "<nazwa/reset>",
+    "cooldown": 120,
+    "isOwner": false,
+    "isNSFW": false,
+    "isVoiceOwner": true,
+    "botPermissions": [
+      "ManageChannels"
+    ],
+    "options": [
+      {
+        "name": "nazwa",
+        "description": "Nazwa, którą chcesz ustawić.",
+        "type": 3,
+        "required": false,
+        "max_length": 100
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "voice-owner",
+    "description": "Zmienia właściciela tymczasowego kanału głosowego.",
+    "category": "Głosowe",
+    "aliases": [
+      "vc-owner",
+      "vcowner",
+      "voiceowner",
+      "vowner",
+      "v-owner"
+    ],
+    "usage": "<użytkownik>",
+    "cooldown": 120,
+    "isOwner": false,
+    "isNSFW": false,
+    "isVoiceOwner": true,
+    "botPermissions": [
+      "ManageChannels"
+    ],
+    "options": [
+      {
+        "name": "użytkownik",
+        "description": "Użytkownik, który ma być nowym właścicielem.",
+        "type": 6,
+        "required": true
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "voice-remove",
+    "description": "Usuwa możliwość wybranemu użytkownikowi dołączania na zablokowany tymczasowy kanał głosowy.",
+    "category": "Głosowe",
+    "aliases": [
+      "vc-remove",
+      "vcremove",
+      "voiceremove",
+      "vremove",
+      "v-remove"
+    ],
+    "usage": "<użytkownik>",
+    "cooldown": 5,
+    "isOwner": false,
+    "isNSFW": false,
+    "isVoiceOwner": true,
+    "botPermissions": [
+      "ManageChannels"
+    ],
+    "options": [
+      {
+        "name": "użytkownik",
+        "description": "Użytkownik, któremu chcesz usunąć uprawnienie do dołączania.",
+        "type": 6,
+        "required": true
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "voice-unban",
+    "description": "Odbanowywuje wybranego użytkownika na tymczasowym kanale głosowym.",
+    "category": "Głosowe",
+    "aliases": [
+      "vc-unban",
+      "vcunban",
+      "voiceunban",
+      "vunban",
+      "v-unban"
+    ],
+    "usage": "<użytkownik>",
+    "cooldown": 5,
+    "isOwner": false,
+    "isNSFW": false,
+    "isVoiceOwner": true,
+    "botPermissions": [
+      "ManageChannels"
+    ],
+    "options": [
+      {
+        "name": "użytkownik",
+        "description": "Użytkownik, którego chcesz odbanować.",
+        "type": 6,
+        "required": true
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "voice-unlock",
+    "description": "Odblokowuje możliwość dołączania użytkowników na tymczasowy kanał głosowy.",
+    "category": "Głosowe",
+    "aliases": [
+      "vc-unlock",
+      "vcunlock",
+      "voiceunlock",
+      "vunlock",
+      "v-unlock"
+    ],
+    "cooldown": 5,
+    "isOwner": false,
+    "isNSFW": false,
+    "isVoiceOwner": true,
+    "botPermissions": [
+      "ManageChannels"
+    ],
+    "isEnabled": true
+  }
+]
