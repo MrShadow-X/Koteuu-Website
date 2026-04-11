@@ -1122,7 +1122,7 @@ body {
   
   /* Pokazuje przycisk "Dodaj na Serwer" w headerze */
   .header .btn {
-    display: block;
+    display: inline-flex;
     margin-inline-start: auto;
     min-height: 40px;
     padding-inline: 15px;
