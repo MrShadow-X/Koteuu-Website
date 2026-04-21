@@ -4,8 +4,8 @@
     "description": "Przełącza działanie automatycznej moderacji zarządzanej przez bota.",
     "aliases": [
       "am",
-      "automoderacja",
-      "moderacja",
+      "amod",
+      "automoderation",
       "moderator"
     ],
     "category": "Ustawienia",
@@ -18,7 +18,9 @@
     ],
     "botPermissions": [
       "EmbedLinks",
-      "ModerateMembers"
+      "ModerateMembers",
+      "ReadMessageHistory",
+      "ManageMessages"
     ],
     "isEnabled": true
   },
@@ -26,7 +28,7 @@
     "name": "autorole",
     "description": "Ustawia rolę, która będzie automatycznie nadawana dla nowych użytkowników i botów.",
     "aliases": [
-      "set-role",
+      "arole",
       "setuprole",
       "setrole",
       "joinrole"
@@ -37,7 +39,8 @@
     "isOwner": false,
     "isNSFW": false,
     "userPermissions": [
-      "ManageGuild"
+      "ManageGuild",
+      "ManageMembers"
     ],
     "botPermissions": [
       "EmbedLinks",
@@ -144,7 +147,6 @@
     "aliases": [
       "set-logs",
       "logs",
-      "logi",
       "setuplogs",
       "setup-logs"
     ],
@@ -220,10 +222,17 @@
     "isOwner": false,
     "isNSFW": false,
     "userPermissions": [
-      "ManageGuild"
+      "ManageGuild",
+      "ManageChannels",
+      "ManageRoles"
     ],
     "botPermissions": [
-      "EmbedLinks"
+      "EmbedLinks",
+      "ManageChannels",
+      "ManageRoles",
+      "PinMessages",
+      "AttachFiles",
+      "ReadMessageHistory"
     ],
     "options": [
       {
@@ -273,7 +282,9 @@
       "ManageGuild"
     ],
     "botPermissions": [
-      "EmbedLinks"
+      "EmbedLinks",
+      "ManageChannels",
+      "MoveMembers"
     ],
     "options": [
       {
@@ -316,10 +327,7 @@
     "description": "Rozpoczyna grę z botem w papier, kamień, nożyce.",
     "category": "Rozrywka",
     "aliases": [
-      "papierkamien",
-      "rockpaperscissors",
-      "pkn",
-      "kpn"
+      "rockpaperscissors"
     ],
     "usage": "[kamień/papier/nożyce]",
     "cooldown": 3,
@@ -471,8 +479,6 @@
       "freegames",
       "epicgames",
       "epicfreegames",
-      "darmowegry",
-      "darmowagra",
       "fgame"
     ],
     "category": "Informacyjne",
@@ -489,10 +495,10 @@
     "name": "help",
     "description": "Wyświetla listę wszystkich komend, lub szczegółowe informacje na temat wybranej komendy.",
     "aliases": [
-      "pomoc",
+      "help",
       "?",
-      "komendy",
-      "komenda"
+      "commands",
+      "command"
     ],
     "usage": "[komenda]",
     "category": "Informacyjne",
@@ -531,9 +537,10 @@
     "name": "owner",
     "description": "Wyświetla informacje o właścicielu bota.",
     "aliases": [
-      "właściciel",
-      "wlasciciel",
-      "creator"
+      "creator",
+      "author",
+      "dev",
+      "developer"
     ],
     "category": "Informacyjne",
     "cooldown": 3,
@@ -549,7 +556,8 @@
     "name": "ping",
     "description": "Wyświetla informacje o opóźnieniach bota.",
     "aliases": [
-      "lag"
+      "lag",
+      "latency"
     ],
     "category": "Informacyjne",
     "cooldown": 3,
@@ -565,9 +573,9 @@
     "name": "roleinfo",
     "description": "Wyświetla informacje o wybranej roli na serwerze.",
     "aliases": [
-      "ri",
       "role",
-      "rola"
+      "rinfo",
+      "ri"
     ],
     "usage": "<rola>",
     "category": "Informacyjne",
@@ -591,7 +599,9 @@
     "name": "uptime",
     "description": "Wyświetla informacje o czasie działania bota.",
     "aliases": [
-      ""
+      "utime",
+      "up",
+      "time"
     ],
     "category": "Informacyjne",
     "cooldown": 3,
@@ -608,8 +618,9 @@
     "description": "Wyświetla informacje o wybranym użytkowniku.",
     "aliases": [
       "ui",
-      "uzytkownik",
-      "użytkownik"
+      "user",
+      "uinfo",
+      "whois"
     ],
     "usage": "[użytkownik]",
     "category": "Informacyjne",
@@ -635,8 +646,8 @@
     "name": "ban",
     "description": "Banuje wybranego użytkownika z serwera.",
     "aliases": [
-      "zbanuj",
-      "banuj"
+      "block",
+      "banish"
     ],
     "category": "Moderacja",
     "usage": "<użytkownik> [powód]",
@@ -673,7 +684,6 @@
     "aliases": [
       "banned",
       "blist",
-      "zablokowani",
       "bannedlist"
     ],
     "cooldown": 5,
@@ -692,9 +702,8 @@
     "description": "Wyrzuca wybranego użytkownika z serwera.",
     "category": "Moderacja",
     "aliases": [
-      "wyrzuc",
-      "wyrzuć",
-      "wykop"
+      "kickout",
+      "kickmember"
     ],
     "usage": "<użytkownik> [powód]",
     "cooldown": 3,
@@ -729,18 +738,19 @@
     "category": "Moderacja",
     "aliases": [
       "purgechannel",
-      "cleanchannel"
+      "cleanchannel",
+      "nukechannel",
+      "resetchannel"
     ],
     "cooldown": 5,
     "isOwner": false,
     "isNSFW": false,
     "userPermissions": [
-      "ManageChannels",
-      "ManageMessages"
+      "ManageChannels"
     ],
     "botPermissions": [
-      "ManageChannels",
-      "EmbedLinks"
+      "EmbedLinks",
+      "ManageChannels"
     ],
     "isEnabled": true
   },
@@ -749,7 +759,9 @@
     "description": "Usuwa podaną ilości wiadomości na kanale.",
     "category": "Moderacja",
     "aliases": [
-      "clean"
+      "clean",
+      "purgechat",
+      "delete"
     ],
     "usage": "<ilość>",
     "cooldown": 5,
@@ -759,6 +771,7 @@
       "ManageMessages"
     ],
     "botPermissions": [
+      "EmbedLinks",
       "ManageMessages",
       "ReadMessageHistory"
     ],
@@ -779,8 +792,8 @@
     "description": "Wysyła wybranego użytkownika na przerwę.",
     "aliases": [
       "tout",
-      "przerwa",
-      "mute"
+      "mute",
+      "tempmute"
     ],
     "category": "Moderacja",
     "usage": "<użytkownik> <czas> [powód]",
@@ -791,7 +804,8 @@
       "ModerateMembers"
     ],
     "botPermissions": [
-      "EmbedLinks"
+      "EmbedLinks",
+      "ModerateMembers"
     ],
     "options": [
       {
@@ -819,7 +833,8 @@
     "name": "unban",
     "description": "Odbanowywuje wybranego użytkownika z serwera.",
     "aliases": [
-      "odbanuj"
+      "pardon",
+      "unblock"
     ],
     "category": "Moderacja",
     "usage": "<użytkownik> [powód]",
@@ -854,10 +869,9 @@
     "name": "unwarn",
     "description": "Usuwa ostrzeżenie dla wybranego użytkownika.",
     "aliases": [
-      "odostrzeż",
-      "odostrzez",
-      "unwarning",
-      "removewarn"
+      "removewarning",
+      "rmwarn",
+      "deletewarn"
     ],
     "category": "Moderacja",
     "usage": "<użytkownik> <ID ostrzeżenia>",
@@ -891,9 +905,8 @@
     "name": "warn",
     "description": "Dodaje ostrzeżenie dla wybranego użytkownika.",
     "aliases": [
-      "ostrzeż",
-      "ostrzez",
       "warning",
+      "warnuser",
       "addwarn"
     ],
     "category": "Moderacja",
@@ -929,8 +942,6 @@
     "description": "Wyświetla listę ostrzeżeń dla wybranego użytkownika.",
     "aliases": [
       "warnings",
-      "ostrzezenia",
-      "ostrzeżenia",
       "warns"
     ],
     "category": "Moderacja",
@@ -957,7 +968,9 @@
     "name": "8d",
     "description": "Przełącza filtr \"8D\" dla odtwarzanej kolejki.",
     "aliases": [
-      "surround"
+      "surround",
+      "8dmode",
+      "8dfilter"
     ],
     "category": "Muzyka",
     "cooldown": 5,
@@ -973,7 +986,10 @@
     "name": "autoplay",
     "description": "Przełącza automatyczne odtwarzanie muzyki po zakończeniu kolejki.",
     "aliases": [
-      "ap"
+      "ap",
+      "autoplaymode",
+      "autoplaytoggle",
+      "aplay"
     ],
     "category": "Muzyka",
     "cooldown": 3,
@@ -990,7 +1006,8 @@
     "description": "Odtwarza poprzedni utwór z kolejki.",
     "aliases": [
       "previous",
-      "prev"
+      "prev",
+      "rewind"
     ],
     "category": "Muzyka",
     "cooldown": 3,
@@ -1007,7 +1024,9 @@
     "description": "Przełącza filtr \"BassBoost\" dla odtwarzanej kolejki.",
     "aliases": [
       "bb",
-      "bass"
+      "bass",
+      "bassfilter",
+      "bassboostfilter"
     ],
     "category": "Muzyka",
     "cooldown": 5,
@@ -1024,7 +1043,9 @@
     "description": "Czyści kolejkę odtwarzania.",
     "aliases": [
       "clearqueue",
-      "wyczysc"
+      "cq",
+      "clearplaylist",
+      "cp"
     ],
     "category": "Muzyka",
     "cooldown": 3,
@@ -1041,8 +1062,9 @@
     "description": "Przełącz powtarzanie utworu lub całej kolejki.",
     "aliases": [
       "lp",
-      "powtarzanie",
-      "repeat"
+      "repeat",
+      "loopmode",
+      "looptoggle"
     ],
     "category": "Muzyka",
     "usage": "<utwór/kolejka/wyłącz>",
@@ -1081,9 +1103,7 @@
     "name": "pause",
     "description": "Wstrzymuje odtwarzanie muzyki.",
     "aliases": [
-      "pauza",
-      "pauzuj",
-      "wstrzymaj"
+      "hold"
     ],
     "category": "Muzyka",
     "cooldown": 3,
@@ -1100,7 +1120,9 @@
     "description": "Odtwarza wybrany utwór na kanale głosowym.",
     "aliases": [
       "p",
-      "muzyka"
+      "playmusic",
+      "musicplay",
+      "sing"
     ],
     "category": "Muzyka",
     "usage": "<tytuł/URL>",
@@ -1109,7 +1131,10 @@
     "isNSFW": false,
     "voiceChannel": true,
     "botPermissions": [
-      "EmbedLinks"
+      "EmbedLinks",
+      "Connect",
+      "Speak",
+      "RequestToSpeak"
     ],
     "options": [
       {
@@ -1126,9 +1151,13 @@
     "name": "queue",
     "description": "Wyświetla kolejkę odtwarzania.",
     "aliases": [
-      "kolejka",
+      "q",
+      "playlist",
+      "que",
+      "qlist",
       "tracks",
-      "utwory"
+      "trackslist",
+      "songs"
     ],
     "category": "Muzyka",
     "cooldown": 3,
@@ -1144,9 +1173,8 @@
     "name": "replay",
     "description": "Ponownie odtwarza aktualny utwór.",
     "aliases": [
-      "powtórz",
-      "powtorz",
-      "rp"
+      "rp",
+      "playagain"
     ],
     "category": "Muzyka",
     "cooldown": 3,
@@ -1163,8 +1191,9 @@
     "description": "Wznawia odtwarzanie muzyki.",
     "aliases": [
       "re",
-      "wznów",
-      "wznow"
+      "continue",
+      "unpause",
+      "resumemusic"
     ],
     "category": "Muzyka",
     "cooldown": 3,
@@ -1180,7 +1209,11 @@
     "name": "shuffle",
     "description": "Zmienia kolejność odtwarzania utworów w kolejce na losową.",
     "aliases": [
-      "pomieszaj"
+      "sh",
+      "mix",
+      "randomize",
+      "shufflequeue",
+      "sq"
     ],
     "category": "Muzyka",
     "cooldown": 3,
@@ -1196,10 +1229,11 @@
     "name": "skip",
     "description": "Odtwarza następny utwór z kolejki.",
     "aliases": [
-      "sk",
       "s",
-      "pomiń",
-      "pomin"
+      "sk",
+      "next",
+      "n",
+      "skiptrack"
     ],
     "category": "Muzyka",
     "cooldown": 3,
@@ -1233,8 +1267,7 @@
     "description": "Ustawia głośność dla aktualnie odtwarzanej kolejki.",
     "aliases": [
       "vol",
-      "głośność",
-      "glosnosc"
+      "v"
     ],
     "category": "Muzyka",
     "usage": "<0-100>",
@@ -1335,7 +1368,6 @@
     "category": "Narzędzia",
     "aliases": [
       "ss",
-      "zrzutekranu",
       "webshot",
       "webss"
     ],
@@ -1361,9 +1393,8 @@
     "description": "Wyświetla informacje o pogodzie dla wybranego miejsca.",
     "category": "Narzędzia",
     "aliases": [
-      "pogoda",
-      "temperatura",
-      "temperature"
+      "temperature",
+      "temp"
     ],
     "usage": "<miejscowość/lokalizacja>",
     "cooldown": 5,
@@ -1399,6 +1430,7 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
+      "EmbedLinks",
       "ManageChannels"
     ],
     "options": [
@@ -1428,6 +1460,7 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
+      "EmbedLinks",
       "MoveMembers",
       "ManageChannels"
     ],
@@ -1458,6 +1491,7 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
+      "EmbedLinks",
       "ManageChannels"
     ],
     "options": [
@@ -1489,6 +1523,7 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
+      "EmbedLinks",
       "MoveMembers"
     ],
     "options": [
@@ -1518,6 +1553,7 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
+      "EmbedLinks",
       "ManageChannels"
     ],
     "options": [
@@ -1548,6 +1584,7 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
+      "EmbedLinks",
       "ManageChannels"
     ],
     "isEnabled": true
@@ -1569,6 +1606,7 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
+      "EmbedLinks",
       "ManageChannels"
     ],
     "options": [
@@ -1599,6 +1637,7 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
+      "EmbedLinks",
       "ManageChannels"
     ],
     "options": [
@@ -1628,6 +1667,7 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
+      "EmbedLinks",
       "ManageChannels"
     ],
     "options": [
@@ -1657,6 +1697,7 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
+      "EmbedLinks",
       "ManageChannels"
     ],
     "options": [
@@ -1685,6 +1726,7 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
+      "EmbedLinks",
       "ManageChannels"
     ],
     "isEnabled": true
