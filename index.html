@@ -174,8 +174,65 @@
       </section>
 
 
+<!-- 
+  - #COMMANDS
+-->
 
+<section class="section commands" id="commands">
+  <div class="container">
+    
+    <div class="commands-header">
+      <h2 class="h2 section-title">Lista Wszystkich Komend:</h2>
+      <p class="section-text">
+        Przeglądaj wszystkie dostępne komendy klikając na kategorię lub skorzystaj z wyszukiwania!
+      </p>
+    </div>
 
+    <!-- Wyszukiwarka -->
+    <div class="search-wrapper">
+      <div class="search-box">
+        <ion-icon name="search-outline" class="search-icon"></ion-icon>
+        <input 
+          type="text" 
+          class="search-input" 
+          placeholder="Szukaj komendy..." 
+          id="command-search"
+          autocomplete="off"
+          spellcheck="false"
+        >
+        <button class="search-clear" aria-label="Wyczyść wyszukiwanie">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+    </div>
+
+    <!-- Filtry kategorii -->
+    <div class="commands-filter-bar" id="commands-filter-bar">
+      <!-- Dynamicznie generowane -->
+    </div>
+
+    <!-- Accordion kategorii -->
+    <div class="commands-accordion" id="commands-accordion">
+      <div class="loading-commands">
+        <div class="loader"></div>
+        <p>Ładowanie komend, proszę czekać...</p>
+      </div>
+    </div>
+
+    <!-- Modal szczegółów -->
+    <div class="command-modal" id="command-modal">
+      <div class="modal-overlay" id="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-banner" id="modal-banner"></div>
+        <button class="modal-close" id="modal-close" aria-label="Zamknij">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <div class="modal-body" id="modal-body"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
       <!-- 
         - #SERVICE
