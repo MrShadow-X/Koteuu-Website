@@ -60,28 +60,6 @@
     "isEnabled": true
   },
   {
-    "name": "backup",
-    "description": "Tworzy kopię zapasową kanałów, uprawnień, ustawień serwera i wiadomości.",
-    "aliases": [
-      "restore",
-      "kopia",
-      "kopia-zapasowa",
-      "przywróć"
-    ],
-    "category": "Ustawienia",
-    "cooldown": 30,
-    "isOwner": false,
-    "isNSFW": false,
-    "userPermissions": [
-      "Administrator"
-    ],
-    "botPermissions": [
-      "EmbedLinks",
-      "Administrator"
-    ],
-    "isEnabled": true
-  },
-  {
     "name": "setgames",
     "description": "Ustawia kanał, na którym będą pojawiać się powiadomienia o darmowych grach na Epic Games.",
     "aliases": [
@@ -375,6 +353,100 @@
     "isEnabled": true
   },
   {
+    "name": "giveaway-reroll",
+    "description": "Pozwala ponownie wylosować zwycięzców w zakończonym losowaniu.",
+    "aliases": [
+      "g-reroll",
+      "greroll",
+      "giveawayreroll"
+    ],
+    "category": "Losowania",
+    "usage": "[ID wiadomości]",
+    "cooldown": 10,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "ManageGuild",
+      "ManageEvents"
+    ],
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "id",
+        "description": "ID wiadomości z losowaniem, w którym chcesz ponownie wylosować zwycięzców.",
+        "type": 3,
+        "required": true
+      }
+    ],
+    "isEnabled": true
+  },
+  {
+    "name": "giveaway-start",
+    "description": "Pozwala stworzyć nowe losowanie na serwerze.",
+    "aliases": [
+      "g-start",
+      "gstart",
+      "giveawaystart"
+    ],
+    "category": "Losowania",
+    "usage": "[kanał] [czas] [liczba_wygranych] [wymagana_rola] [nagroda]",
+    "cooldown": 10,
+    "isOwner": false,
+    "isNSFW": false,
+    "userPermissions": [
+      "ManageGuild",
+      "ManageEvents"
+    ],
+    "botPermissions": [
+      "EmbedLinks"
+    ],
+    "options": [
+      {
+        "name": "kanał",
+        "description": "Kanał, na który zostanie wysłana wiadomość umożliwiająca dołączenie.",
+        "type": 7,
+        "required": false,
+        "channel_types": [
+          0,
+          5
+        ]
+      },
+      {
+        "name": "czas",
+        "description": "Czas, za który losowanie zostanie zakończone.",
+        "min_length": 1,
+        "max_length": 6,
+        "type": 3,
+        "required": false
+      },
+      {
+        "name": "zwycięzcy",
+        "description": "Liczba osób, które wygrają losowanie.",
+        "min_value": 1,
+        "max_value": 10,
+        "type": 4,
+        "required": false
+      },
+      {
+        "name": "rola",
+        "description": "Rola, która będzie wymagana do dołączenia.",
+        "type": 8,
+        "required": false
+      },
+      {
+        "name": "nagroda",
+        "description": "Nagroda, którą można wygrać w losowaniu.",
+        "min_length": 1,
+        "max_length": 50,
+        "type": 3,
+        "required": false
+      }
+    ],
+    "isEnabled": true
+  },
+  {
     "name": "changelog",
     "description": "Wyświetla informacje o nowych zmianach i aktualizacjach bota.",
     "aliases": [
@@ -544,6 +616,8 @@
     "cooldown": 3,
     "isOwner": false,
     "isNSFW": false,
+    "contextUser": true,
+    "contextName": "📋 Wyświetl Informacje",
     "botPermissions": [
       "EmbedLinks"
     ],
@@ -645,89 +719,6 @@
         "description": "Powód, dla którego chcesz wyrzucić użytkownika.",
         "type": 3,
         "required": false
-      }
-    ],
-    "isEnabled": true
-  },
-  {
-    "name": "lock",
-    "description": "Blokuje możliwość wysyłania wiadomości na kanale.",
-    "aliases": [
-      "lock-channel",
-      "lockchannel"
-    ],
-    "category": "Moderacja",
-    "usage": "[powód]",
-    "cooldown": 10,
-    "isOwner": false,
-    "isNSFW": false,
-    "userPermissions": [
-      "ManageChannels"
-    ],
-    "botPermissions": [
-      "EmbedLinks",
-      "ManageChannels"
-    ],
-    "options": [
-      {
-        "name": "powód",
-        "description": "Powód, dla którego chcesz zablokować kanał.",
-        "type": 3,
-        "required": false
-      }
-    ],
-    "isEnabled": true
-  },
-  {
-    "name": "nickname",
-    "description": "Pozwala zarządzać pseudonimem wybranego użytkownika na serwerze.",
-    "category": "Moderacja",
-    "aliases": [
-      "nick",
-      "displayname"
-    ],
-    "usage": "<change/remove> <użytkownik> [pseudonim]",
-    "cooldown": 5,
-    "isOwner": false,
-    "isNSFW": false,
-    "userPermissions": [
-      "ManageNicknames"
-    ],
-    "botPermissions": [
-      "ManageNicknames"
-    ],
-    "options": [
-      {
-        "name": "change",
-        "description": "Zmień pseudomim na serwerze.",
-        "type": 1,
-        "options": [
-          {
-            "name": "pseudonim",
-            "description": "Podaj nowy pseudonim jaki chcesz ustawić. (%s - Wyświetlana Nazwa Użytkownika)",
-            "type": 3,
-            "required": true
-          },
-          {
-            "name": "użytkownik",
-            "description": "Użytkownik, dla którego chcesz zmienić pseudonim.",
-            "type": 6,
-            "required": false
-          }
-        ]
-      },
-      {
-        "name": "remove",
-        "description": "Usuń pseudomim na serwerze.",
-        "type": 1,
-        "options": [
-          {
-            "name": "użytkownik",
-            "description": "Użytkownik, dla którego chcesz usunąć pseudonim.",
-            "type": 6,
-            "required": false
-          }
-        ]
       }
     ],
     "isEnabled": true
@@ -947,6 +938,8 @@
     "cooldown": 3,
     "isOwner": false,
     "isNSFW": false,
+    "contextUser": true,
+    "contextName": "🔎 Sprawdź Ostrzeżenia",
     "botPermissions": [
       "EmbedLinks"
     ],
@@ -1261,189 +1254,6 @@
         "min_value": 0,
         "max_value": 100
       }
-    ],
-    "isEnabled": true
-  },
-  {
-    "name": "blacklist",
-    "description": "Wyświetla, dodaje lub usuwa osoby z czarnej listy.",
-    "aliases": [
-      "bl"
-    ],
-    "usage": "[add/remove <ID>]",
-    "category": "Właściciel",
-    "cooldown": 0,
-    "isOwner": true,
-    "isNSFW": false,
-    "voiceChannel": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
-    "isEnabled": true
-  },
-  {
-    "name": "checkgames",
-    "description": "Ręcznie wyszukuje serwery bez powiadomień o nowych darmowych grach.",
-    "aliases": [
-      "checkgame",
-      "cgames",
-      "cg"
-    ],
-    "category": "Właściciel",
-    "cooldown": 0,
-    "isOwner": true,
-    "isNSFW": false,
-    "voiceChannel": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
-    "isEnabled": true
-  },
-  {
-    "name": "getinvite",
-    "description": "Wysyła link z zaproszeniem do wybranego serwera.",
-    "aliases": [
-      "ginvite"
-    ],
-    "category": "Właściciel",
-    "cooldown": 0,
-    "isOwner": true,
-    "isNSFW": false,
-    "voiceChannel": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
-    "isEnabled": true
-  },
-  {
-    "name": "playerinfo",
-    "description": "Wyświetla informacje dotyczące odtwarzacza muzyki na serwerze.",
-    "aliases": [
-      "pi"
-    ],
-    "category": "Właściciel",
-    "cooldown": 0,
-    "isOwner": true,
-    "isNSFW": false,
-    "voiceChannel": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
-    "isEnabled": true
-  },
-  {
-    "name": "reboot",
-    "description": "Wykonuje restart całego bota.",
-    "aliases": [
-      "rb",
-      "restart"
-    ],
-    "category": "Właściciel",
-    "cooldown": 0,
-    "isOwner": true,
-    "isNSFW": false,
-    "voiceChannel": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
-    "isEnabled": true
-  },
-  {
-    "name": "reconnect",
-    "description": "Ponownie łączy się z serwerami LavaLink.",
-    "aliases": [
-      "rc",
-      "rclavalink"
-    ],
-    "category": "Właściciel",
-    "cooldown": 0,
-    "isOwner": true,
-    "isNSFW": false,
-    "voiceChannel": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
-    "isEnabled": true
-  },
-  {
-    "name": "reload",
-    "description": "Przeładowywuje wybraną komendę.",
-    "aliases": [
-      "rl"
-    ],
-    "category": "Właściciel",
-    "cooldown": 0,
-    "isOwner": true,
-    "isNSFW": false,
-    "voiceChannel": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
-    "options": [
-      {
-        "name": "folder",
-        "description": "Nazwa folderu, w którym znajduje się plik, który chcesz przeładować.",
-        "type": 3,
-        "required": true
-      },
-      {
-        "name": "plik",
-        "description": "Nazwa pliku, który chcesz przeładować.",
-        "type": 3,
-        "required": true
-      }
-    ],
-    "isEnabled": true
-  },
-  {
-    "name": "say",
-    "description": "Pozwala wysłać dowolną wiadomość jako bot.",
-    "category": "Właściciel",
-    "aliases": [
-      "embed",
-      "sendmessage",
-      "message",
-      "msg"
-    ],
-    "usage": "<URL>",
-    "cooldown": 0,
-    "isOwner": true,
-    "isNSFW": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
-    "isEnabled": true
-  },
-  {
-    "name": "serverlist",
-    "description": "Wyświetla listę wszystkich serwerów na których znajduję się Koteuu.",
-    "aliases": [
-      "sl",
-      "server-list",
-      "servers"
-    ],
-    "category": "Właściciel",
-    "cooldown": 0,
-    "isOwner": true,
-    "isNSFW": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
-    "isEnabled": true
-  },
-  {
-    "name": "test",
-    "description": "Test command.",
-    "aliases": [
-      "debug"
-    ],
-    "category": "Właściciel",
-    "cooldown": 0,
-    "isOwner": true,
-    "isNSFW": false,
-    "voiceChannel": false,
-    "botPermissions": [
-      "EmbedLinks"
     ],
     "isEnabled": true
   },
