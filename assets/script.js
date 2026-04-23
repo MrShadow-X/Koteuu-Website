@@ -532,7 +532,7 @@ document.addEventListener('click', function(event) {
               <span><span class="permission-label">Użytkownik:</span>
                 ${command.userPermissions && command.userPermissions.length > 0
                   ? escapeHtml(command.userPermissions.join(', '))
-                  : 'Brak wymagań'}
+                  : 'Brak wymagań.'}
               </span>
             </div>
             <div class="permission-item">
@@ -540,7 +540,7 @@ document.addEventListener('click', function(event) {
               <span><span class="permission-label">Bot:</span>
                 ${command.botPermissions && command.botPermissions.length > 0
                   ? escapeHtml(command.botPermissions.join(', '))
-                  : 'Brak wymagań'}
+                  : 'Brak wymagań.'}
               </span>
             </div>
           </div>
