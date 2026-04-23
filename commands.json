@@ -17,10 +17,10 @@
       "ModerateMembers"
     ],
     "botPermissions": [
-      "EmbedLinks",
       "ModerateMembers",
       "ReadMessageHistory",
-      "ManageMessages"
+      "ManageMessages",
+      "AddReactions"
     ],
     "isEnabled": true
   },
@@ -40,11 +40,10 @@
     "isNSFW": false,
     "userPermissions": [
       "ManageGuild",
-      "ManageMembers"
+      "ManageRoles"
     ],
     "botPermissions": [
-      "EmbedLinks",
-      "ManageMembers"
+      "ManageRoles"
     ],
     "options": [
       {
@@ -80,9 +79,6 @@
     "userPermissions": [
       "ManageGuild"
     ],
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "options": [
       {
         "name": "kanał",
@@ -117,9 +113,6 @@
     "isNSFW": false,
     "userPermissions": [
       "ManageGuild"
-    ],
-    "botPermissions": [
-      "EmbedLinks"
     ],
     "options": [
       {
@@ -158,9 +151,6 @@
     "userPermissions": [
       "ManageGuild"
     ],
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "options": [
       {
         "name": "kanał",
@@ -191,9 +181,6 @@
     "isNSFW": false,
     "userPermissions": [
       "ManageGuild"
-    ],
-    "botPermissions": [
-      "EmbedLinks"
     ],
     "options": [
       {
@@ -227,7 +214,6 @@
       "ManageRoles"
     ],
     "botPermissions": [
-      "EmbedLinks",
       "ManageChannels",
       "ManageRoles",
       "PinMessages",
@@ -282,7 +268,6 @@
       "ManageGuild"
     ],
     "botPermissions": [
-      "EmbedLinks",
       "ManageChannels",
       "MoveMembers"
     ],
@@ -317,9 +302,6 @@
     "cooldown": 3,
     "isOwner": false,
     "isNSFW": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "isEnabled": true
   },
   {
@@ -333,9 +315,6 @@
     "cooldown": 3,
     "isOwner": false,
     "isNSFW": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "options": [
       {
         "name": "wybór",
@@ -377,9 +356,6 @@
       "ManageGuild",
       "ManageEvents"
     ],
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "options": [
       {
         "name": "id",
@@ -406,9 +382,6 @@
     "userPermissions": [
       "ManageGuild",
       "ManageEvents"
-    ],
-    "botPermissions": [
-      "EmbedLinks"
     ],
     "options": [
       {
@@ -467,9 +440,6 @@
     "isOwner": false,
     "isNSFW": false,
     "voiceChannel": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "isEnabled": true
   },
   {
@@ -486,9 +456,6 @@
     "isOwner": false,
     "isNSFW": false,
     "voiceChannel": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "isEnabled": true
   },
   {
@@ -505,9 +472,6 @@
     "cooldown": 3,
     "isOwner": false,
     "isNSFW": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "options": [
       {
         "name": "komenda",
@@ -528,9 +492,6 @@
     "cooldown": 3,
     "isOwner": false,
     "isNSFW": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "isEnabled": true
   },
   {
@@ -547,9 +508,6 @@
     "isOwner": false,
     "isNSFW": false,
     "voiceChannel": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "isEnabled": true
   },
   {
@@ -564,9 +522,6 @@
     "isOwner": false,
     "isNSFW": false,
     "voiceChannel": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "isEnabled": true
   },
   {
@@ -582,9 +537,6 @@
     "cooldown": 3,
     "isOwner": false,
     "isNSFW": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "options": [
       {
         "name": "rola",
@@ -608,9 +560,6 @@
     "isOwner": false,
     "isNSFW": false,
     "voiceChannel": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "isEnabled": true
   },
   {
@@ -629,9 +578,6 @@
     "isNSFW": false,
     "contextUser": true,
     "contextName": "📋 Wyświetl Informacje",
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "options": [
       {
         "name": "użytkownik",
@@ -658,7 +604,6 @@
       "BanMembers"
     ],
     "botPermissions": [
-      "EmbedLinks",
       "BanMembers"
     ],
     "options": [
@@ -692,9 +637,6 @@
     "userPermissions": [
       "BanMembers"
     ],
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "isEnabled": true
   },
   {
@@ -713,7 +655,6 @@
       "KickMembers"
     ],
     "botPermissions": [
-      "EmbedLinks",
       "KickMembers"
     ],
     "options": [
@@ -749,7 +690,6 @@
       "ManageChannels"
     ],
     "botPermissions": [
-      "EmbedLinks",
       "ManageChannels"
     ],
     "isEnabled": true
@@ -771,7 +711,6 @@
       "ManageMessages"
     ],
     "botPermissions": [
-      "EmbedLinks",
       "ManageMessages",
       "ReadMessageHistory"
     ],
@@ -804,7 +743,6 @@
       "ModerateMembers"
     ],
     "botPermissions": [
-      "EmbedLinks",
       "ModerateMembers"
     ],
     "options": [
@@ -845,7 +783,6 @@
       "BanMembers"
     ],
     "botPermissions": [
-      "EmbedLinks",
       "BanMembers"
     ],
     "options": [
@@ -882,7 +819,6 @@
       "ModerateMembers"
     ],
     "botPermissions": [
-      "EmbedLinks",
       "ModerateMembers"
     ],
     "options": [
@@ -918,7 +854,6 @@
       "ModerateMembers"
     ],
     "botPermissions": [
-      "EmbedLinks",
       "ModerateMembers"
     ],
     "options": [
@@ -951,9 +886,6 @@
     "isNSFW": false,
     "contextUser": true,
     "contextName": "🔎 Sprawdź Ostrzeżenia",
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "options": [
       {
         "name": "użytkownik",
@@ -977,9 +909,6 @@
     "isOwner": false,
     "isNSFW": false,
     "voiceChannel": true,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "isEnabled": true
   },
   {
@@ -996,9 +925,6 @@
     "isOwner": false,
     "isNSFW": false,
     "voiceChannel": true,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "isEnabled": true
   },
   {
@@ -1014,9 +940,6 @@
     "isOwner": false,
     "isNSFW": false,
     "voiceChannel": true,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "isEnabled": true
   },
   {
@@ -1033,9 +956,6 @@
     "isOwner": false,
     "isNSFW": false,
     "voiceChannel": true,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "isEnabled": true
   },
   {
@@ -1052,9 +972,6 @@
     "isOwner": false,
     "isNSFW": false,
     "voiceChannel": true,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "isEnabled": true
   },
   {
@@ -1072,9 +989,6 @@
     "isOwner": false,
     "isNSFW": false,
     "voiceChannel": true,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "options": [
       {
         "name": "sposób",
@@ -1110,9 +1024,6 @@
     "isOwner": false,
     "isNSFW": false,
     "voiceChannel": true,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "isEnabled": true
   },
   {
@@ -1131,10 +1042,10 @@
     "isNSFW": false,
     "voiceChannel": true,
     "botPermissions": [
-      "EmbedLinks",
       "Connect",
       "Speak",
-      "RequestToSpeak"
+      "RequestToSpeak",
+      "AttachFiles"
     ],
     "options": [
       {
@@ -1164,9 +1075,6 @@
     "isOwner": false,
     "isNSFW": false,
     "voiceChannel": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "isEnabled": true
   },
   {
@@ -1181,9 +1089,6 @@
     "isOwner": false,
     "isNSFW": false,
     "voiceChannel": true,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "isEnabled": true
   },
   {
@@ -1200,9 +1105,6 @@
     "isOwner": false,
     "isNSFW": false,
     "voiceChannel": true,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "isEnabled": true
   },
   {
@@ -1220,9 +1122,6 @@
     "isOwner": false,
     "isNSFW": false,
     "voiceChannel": true,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "isEnabled": true
   },
   {
@@ -1240,9 +1139,6 @@
     "isOwner": false,
     "isNSFW": false,
     "voiceChannel": true,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "isEnabled": true
   },
   {
@@ -1257,9 +1153,6 @@
     "isOwner": false,
     "isNSFW": false,
     "voiceChannel": true,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "isEnabled": true
   },
   {
@@ -1275,9 +1168,6 @@
     "isOwner": false,
     "isNSFW": false,
     "voiceChannel": true,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "options": [
       {
         "name": "wartość",
@@ -1300,9 +1190,6 @@
     "cooldown": 3,
     "isOwner": false,
     "isNSFW": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "usage": "<adres IP>",
     "options": [
       {
@@ -1325,9 +1212,6 @@
     "cooldown": 3,
     "isOwner": false,
     "isNSFW": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "options": [
       {
         "name": "nick",
@@ -1349,9 +1233,6 @@
     "cooldown": 5,
     "isOwner": false,
     "isNSFW": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "options": [
       {
         "name": "tekst",
@@ -1375,9 +1256,6 @@
     "cooldown": 120,
     "isOwner": false,
     "isNSFW": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "options": [
       {
         "name": "link",
@@ -1400,9 +1278,6 @@
     "cooldown": 5,
     "isOwner": false,
     "isNSFW": false,
-    "botPermissions": [
-      "EmbedLinks"
-    ],
     "options": [
       {
         "name": "lokalizacja",
@@ -1430,7 +1305,6 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
-      "EmbedLinks",
       "ManageChannels"
     ],
     "options": [
@@ -1460,7 +1334,6 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
-      "EmbedLinks",
       "MoveMembers",
       "ManageChannels"
     ],
@@ -1491,7 +1364,6 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
-      "EmbedLinks",
       "ManageChannels"
     ],
     "options": [
@@ -1523,7 +1395,6 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
-      "EmbedLinks",
       "MoveMembers"
     ],
     "options": [
@@ -1553,7 +1424,6 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
-      "EmbedLinks",
       "ManageChannels"
     ],
     "options": [
@@ -1584,7 +1454,6 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
-      "EmbedLinks",
       "ManageChannels"
     ],
     "isEnabled": true
@@ -1606,7 +1475,6 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
-      "EmbedLinks",
       "ManageChannels"
     ],
     "options": [
@@ -1637,7 +1505,6 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
-      "EmbedLinks",
       "ManageChannels"
     ],
     "options": [
@@ -1667,7 +1534,6 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
-      "EmbedLinks",
       "ManageChannels"
     ],
     "options": [
@@ -1697,7 +1563,6 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
-      "EmbedLinks",
       "ManageChannels"
     ],
     "options": [
@@ -1726,7 +1591,6 @@
     "isNSFW": false,
     "isVoiceOwner": true,
     "botPermissions": [
-      "EmbedLinks",
       "ManageChannels"
     ],
     "isEnabled": true
